@@ -1,0 +1,180 @@
+html,body
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+}
+
+.wallpaper
+{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: 0;
+    position: fixed;
+    object-fit: cover;
+}
+
+.top
+{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 40px;    
+    height: 100px;
+    background-color: black;
+    gap: 4%;          
+    z-index: 20;
+}
+
+.top form 
+{
+    flex-grow: 1;  
+    display: flex;
+    align-items: center;
+}
+
+.top input
+{
+    width: 100%;          
+    box-sizing: border-box; 
+    padding: 10px;        
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    margin: 0;
+}
+
+.top .pagetag
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 8px;
+    margin-right: 5%;
+    user-select: none;
+    color: rgb(94, 255, 0);
+}
+
+.top a 
+{
+    font-size: 35px;
+    text-decoration: none;
+    color: rgb(94, 255, 0);
+}
+
+.top a:hover
+{
+    color: rgb(0, 213, 0);
+}
+
+.filter
+{
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: end;
+    top: 120px; 
+    right: 20px;
+    z-index: 15;
+    color: white;
+
+}
+
+.filter .fbut
+{
+    margin-bottom: 1px;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 140px;
+    margin-left: 3%;
+    z-index: 10;
+    gap: auto;
+    flex-wrap: wrap;
+}
+
+.subcon img
+{
+    width: 350px;
+    height: 250px;
+}
+
+.subcon
+{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    width: 450px;
+    max-height: 500px;
+    border-radius: 10px;
+    margin-right: 2%;
+    margin-bottom: 15px;
+}
+
+.subcon .itemimg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.subcon .description
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.subcon .description p
+{
+    margin-top: 18px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.addbutton
+{
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    bottom: 20px; 
+    right: 20px;
+    z-index: 15;
+}
+
+.button
+{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    margin-left: 25px;
+    gap: 2%;
+}
+
+.button input
+{
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.button input:hover
+{
+    color: orange;
+}

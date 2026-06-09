@@ -1,0 +1,33 @@
+html, body
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: whitesmoke;
+    align-items: center;
+}
+
+.addsec
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+
+.left
+{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-right: 10%;
+    padding-bottom: 29%;
+}
+
+.left img
+{
+    width: 350px;
+    height: 250px;
+}
