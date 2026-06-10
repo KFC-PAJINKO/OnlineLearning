@@ -68,9 +68,20 @@
                                                         <?= $ta['description'] ?>
                                                         <label>Status: </label>
                                                         <?= $ta['status'] ?>
-                                                        <div class="linkurl">
-                                                            <a href="<?= $ta['url']?>">Click here</a>
-                                                        </div>
+                                                        <?php 
+                                                        if(isset($ta['url']) && !empty($ta['url']))
+                                                            {
+                                                                echo "<div class='linkurl'>";
+                                                                echo "<a href=". $ta['url'] . ">Click here</a>";
+                                                                echo "</div>";
+                                                            }
+                                                        if(isset($ta['vid']) && !empty($ta['vid']))
+                                                            {
+                                                                echo "<div class='linkvid'>";
+                                                                echo "<a href=video.php>See Video</a>";
+                                                                echo "</div>";
+                                                            }
+                                                        ?>
                                                     </div>      
                                                     <?php
                                                     endforeach;

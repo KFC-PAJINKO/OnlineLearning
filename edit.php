@@ -48,15 +48,21 @@
                     </div>
                     <div class="rright">
                         <h1>Add Topic</h1>
-                        <form action="connect.php" method="post">
-                            <input type="hidden" name="cid" value="<?php echo $row['cid']; ?>">
-                            <p>TopicName:</p> 
-                            <input type="text" name="topicname">
-                            <p>TopicDescription:</p>
-                            <input type="text" name="topicdescription">
-                            <p>URL:</p>
-                            <input type="text" name="url">
-                            <input type="submit" name="submittopic" value="submit">
+                        <form action="connect.php" method="post" enctype="multipart/form-data">
+                            <div class="inputleft">
+                                <input type="hidden" name="cid" value="<?php echo $row['cid']; ?>">
+                                <p>TopicName:</p> 
+                                <input type="text" name="topicname">
+                                <p>TopicDescription:</p>
+                                <input type="text" name="topicdescription">
+                                <p>URL:</p>
+                                <input type="text" name="url">
+                            </div>
+                            <div class="inputright">
+                                <p>UploadVideo:</p>
+                                <input type="file" name="upvideo">                
+                                <input type="submit" name="submittopic" value="submit">
+                            </div>
                         </form>                
                         <div class="topicitemborder">
                             <?php

@@ -146,16 +146,24 @@
                 }
             else
                 {
-                    $topic = "insert into topic (topicname, description, status, cid) values ('$tname', '$tdes', '$status', '$cid');";
-                    if($conn -> query($topic) == true)
-                        {
-                            header("Location: edit.php?id=" . $cid);
-                            exit();
-                        }
-                    else
-                        {
-                            echo "Error: " . $d . "<br>" . $conn->error;
-                        }
+                    echo "No URL attached";
+                }
+
+            if(isset($_FILES['upvideo']) && !empty($_POST['upvideo']))
+                {
+                    $tmpvideo= $_FILES['upvideo']['tmp_name'];
+                    $vid = file_get_contents($tmpvideo);
+                    $topic = "insert into topic (topicname, description, status, cid, vid) values (?, ?, ?, ?, ?);";
+                    $null = null;
+                    $stmt -> bind_param("sssib",$tname, $tdes, $status, $cid, $null);
+                    $stmt -> send_long_data(0, $vid);
+                    $stmt -> execute();
+                    header("Location: edit.php?id=" . $cid);
+                    exit();                     
+                }
+            else
+                {
+                    echo "No video attached";
                 }
         }
             

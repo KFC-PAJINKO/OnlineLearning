@@ -120,8 +120,36 @@ html, body
 }
 
 .rright form
-{
+{   
+    display: flex;
+    flex-direction: row;
     margin-bottom: 50px;
+}
+
+.rright .inputleft
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.rright .inputright
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+}
+
+.rright .inputright input[type=file]
+{
+    margin-bottom: 20px;
+}
+
+.rright .inputright input[type=submit]
+{
+    padding: 3px 10px;    
+    font-size: 14px;    
+    width: 80px;
+    cursor: pointer;
 }
 
 .topicitemborder
