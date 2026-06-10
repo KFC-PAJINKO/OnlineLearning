@@ -122,4 +122,22 @@
                     echo "Error: " . $d . "<br>" . $conn->error;
                 }
         }
+    
+    if(isset($_POST['submittopic']))
+        {
+            $tname = $_POST['topicname'];
+            $tdes = $_POST['topicdescription'];
+            $status = "unstarted";
+            $cid = $_POST['cid'];
+            $topic = "insert into topic (topicname, description, status, cid) values ('$tname', '$tdes', '$status', '$cid');";
+            if($conn -> query($topic) == true)
+                {
+                    header("Location: edit.php?id=" . $cid);
+                    exit();
+                }
+            else
+                {
+                    echo "Error: " . $d . "<br>" . $conn->error;
+                }
+        }
 ?>

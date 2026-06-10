@@ -2,6 +2,8 @@
     require("connect.php");
     $did = $_GET['id'];
     $d = "select * from info where cid = $did";
+    $c = "select * from topic where cid = $did";
+    $t = [];
     $result = $conn->query($d)
 ?>
 
@@ -45,10 +47,50 @@
                         </form>   
                     </div>
                     <div class="rright">
-                        <h1>Add Topic</h1>  
+                        <h1>Add Topic</h1>
+                        <form action="connect.php" method="post">
+                            <input type="hidden" name="cid" value="<?php echo $row['cid']; ?>">
+                            <p>TopicName:</p> 
+                            <input type="text" name="topicname">
+                            <p>TopicDescription:</p>
+                            <input type="text" name="topicdescription">
+                            <input type="submit" name="submittopic" value="submit">
+                        </form>
+                <?php endwhile; ?> 
+                        <div class="topicitemborder">
+                            <?php
+                                if($topic = $conn->query($c))
+                                {
+                                    if($topic->num_rows > 0)
+                                        {
+                                            while($topicarray = $topic->fetch_assoc())
+                                            {
+                                                $t[] = $topicarray;
+                                            }
+                                            foreach($t as $ta):
+                                            ?>  
+                                            <div class="topicitem">
+                                                <label>TID: </label>
+                                                <?= $ta['tid'] ?>   
+                                                <label>Topic: </label>
+                                                <?= $ta['topicname'] ?> 
+                                                <label>TopicDescription: </label>   
+                                                <?= $ta['description'] ?>
+                                                <label>Status: </label>
+                                                <?= $ta['status'] ?>
+                                            </div>      
+                                            <?php
+                                            endforeach;
+                                        }
+                                    else
+                                    {
+                                        echo "no topic yet";
+                                    }
+                                }
+                            ?>  
+                        </div>
                     </div>             
-                </div>   
-            <?php endwhile; ?>       
+                </div>
         </section>
     </body>
 </html>

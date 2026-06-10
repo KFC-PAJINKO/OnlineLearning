@@ -107,3 +107,26 @@ html, body
 {
     margin-left: 20px;
 }
+
+.rright form
+{
+    margin-bottom: 50px;
+}
+
+.topicitemborder
+{
+    background-color: black;
+    padding: 25px 25px 25px 0px;
+    max-height: 150px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.rright .topicitem
+{
+    margin: 0px 0px 10px 25px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(66, 66, 66);
+    color: white;
+}

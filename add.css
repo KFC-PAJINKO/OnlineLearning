@@ -53,19 +53,19 @@ html, body
     margin-top: 8px;
     margin-right: 5%;
     user-select: none;
-    color: rgb(94, 255, 0);
+    color: #EEEEEE;
 }
 
 .top a 
 {
     font-size: 35px;
     text-decoration: none;
-    color: rgb(94, 255, 0);
+    color: #EEEEEE;
 }
 
 .top a:hover
 {
-    color: rgb(0, 213, 0);
+    color: #EEEEEE;
 }
 
 .addsec
