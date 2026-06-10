@@ -20,7 +20,7 @@
                 <input type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
-                <h1>Admin</h1>
+                <h1>Moreinfo</h1>
             </div>            
         </section>
         <section class="info">            
@@ -35,11 +35,13 @@
                             <h1>Course Introduction: </h1>
                             <?php echo "<p>".$minfo['description']."</p>"; ?>
                         </div>
-                        <div class='generalinfo'>
-                            <div class='cpic'>                          
-                                <h1>Course Image:</h1>
+                        <div class='generalinfo'>                            
+                            <div class='cpic'>   
+                                <h1>Course Image:</h1>     
+                                <div class="cpicborder">                                                 
                                 <?php echo "<img src='data:image/jpeg;base64," . base64_encode($minfo['pic']) . "' alt='Guitar Image'>"; ?>
-                            </div>
+                                </div>
+                            </div> 
                             <div class='coursecontent'>
                                 <div class="courseinfo">
                                     <?php echo "<p>CourseID: " . $minfo['cid'] . "</p>"; ?>
@@ -66,6 +68,9 @@
                                                         <?= $ta['description'] ?>
                                                         <label>Status: </label>
                                                         <?= $ta['status'] ?>
+                                                        <div class="linkurl">
+                                                            <a href="<?= $ta['url']?>">Click here</a>
+                                                        </div>
                                                     </div>      
                                                     <?php
                                                     endforeach;

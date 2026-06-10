@@ -54,9 +54,10 @@
                             <input type="text" name="topicname">
                             <p>TopicDescription:</p>
                             <input type="text" name="topicdescription">
+                            <p>URL:</p>
+                            <input type="text" name="url">
                             <input type="submit" name="submittopic" value="submit">
-                        </form>
-                <?php endwhile; ?> 
+                        </form>                
                         <div class="topicitemborder">
                             <?php
                                 if($topic = $conn->query($c))
@@ -78,6 +79,12 @@
                                                 <?= $ta['description'] ?>
                                                 <label>Status: </label>
                                                 <?= $ta['status'] ?>
+                                                <div class="tbutton">
+                                                    <form>
+                                                        <input type="submit" name="edittopic" value="edit">
+                                                        <input type="submit" name="deletetopic" value="delete">
+                                                    </form>
+                                                </div>
                                             </div>      
                                             <?php
                                             endforeach;
@@ -91,6 +98,7 @@
                         </div>
                     </div>             
                 </div>
+            <?php endwhile; ?> 
         </section>
     </body>
 </html>

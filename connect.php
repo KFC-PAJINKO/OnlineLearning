@@ -129,15 +129,34 @@
             $tdes = $_POST['topicdescription'];
             $status = "unstarted";
             $cid = $_POST['cid'];
-            $topic = "insert into topic (topicname, description, status, cid) values ('$tname', '$tdes', '$status', '$cid');";
-            if($conn -> query($topic) == true)
+            
+            if(isset($_POST['url']) && !empty($_POST['url']))
                 {
-                    header("Location: edit.php?id=" . $cid);
-                    exit();
+                    $url = $_POST['url'];
+                    $topic = "insert into topic (topicname, description, status, cid, url) values ('$tname', '$tdes', '$status', '$cid', '$url');";
+                    if($conn -> query($topic) == true)
+                        {
+                            header("Location: edit.php?id=" . $cid);
+                            exit();
+                        }
+                    else
+                        {
+                            echo "Error: " . $d . "<br>" . $conn->error;
+                        }
                 }
             else
                 {
-                    echo "Error: " . $d . "<br>" . $conn->error;
+                    $topic = "insert into topic (topicname, description, status, cid) values ('$tname', '$tdes', '$status', '$cid');";
+                    if($conn -> query($topic) == true)
+                        {
+                            header("Location: edit.php?id=" . $cid);
+                            exit();
+                        }
+                    else
+                        {
+                            echo "Error: " . $d . "<br>" . $conn->error;
+                        }
                 }
         }
+            
 ?>

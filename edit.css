@@ -74,7 +74,7 @@ html, body
     margin: 7.5% 2% 0% 2%;
     color: black;
     background-color: #EEEEEE;
-    padding: 15px 15px 30px 15px;
+    padding: 10px 10px 30px 10px;
     border-radius: 10px;
 }
 
@@ -82,7 +82,7 @@ html, body
 {
     display: flex;
     flex-direction: column;
-    margin: 1% 4% 0% 2%;
+    margin: 1% 1% 0% 2%;
     background-color: #ffffff;
     margin-bottom: auto;
     padding: 5px 25px 25px 25px;
@@ -101,11 +101,22 @@ html, body
 {
     display: flex;
     flex-direction: row;
+    margin-top: 1%;
+}
+
+.rleft
+{
+    background-color: white;
+    padding: 0px 15px 20px 15px;
+    border-radius: 10px;
 }
 
 .rright
 {
     margin-left: 20px;
+    padding: 0px 15px 10px 15px;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .rright form
@@ -115,9 +126,12 @@ html, body
 
 .topicitemborder
 {
+    display: flex;
+    flex-direction: column;
     background-color: black;
-    padding: 25px 25px 25px 0px;
+    padding: 25px 25px 40px 0px;
     max-height: 150px;
+    width: 500px;
     border-radius: 10px;
     overflow: auto;
 }
@@ -125,8 +139,21 @@ html, body
 .rright .topicitem
 {
     margin: 0px 0px 10px 25px;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     border-radius: 10px;
     background-color: rgb(66, 66, 66);
     color: white;
+}
+
+.topicitem form
+{
+    margin: 0;
+    padding: 0;
+}
+
+.topicitem input[type=submit]
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 35px 5px 35px;
 }
