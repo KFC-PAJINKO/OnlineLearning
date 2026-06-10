@@ -6,28 +6,104 @@ html, body
     padding: 0;
     height: 100vh;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: #CB2957;
+}
+
+.top
+{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
     align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 40px;    
+    height: 100px;
+    background-color: black;
+    gap: 4%;          
+    z-index: 20;
+}
+
+.top form 
+{
+    flex-grow: 1;  
+    display: flex;
+    align-items: center;
+}
+
+.top input
+{
+    width: 100%;          
+    box-sizing: border-box; 
+    padding: 10px;        
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    margin: 0;
+}
+
+.top .pagetag
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 8px;
+    margin-right: 5%;
+    user-select: none;
+    color: #EEEEEE;
+}
+
+.top a 
+{
+    font-size: 35px;
+    text-decoration: none;
+    color: #EEEEEE;
+}
+
+.top a:hover
+{
+    color: #EEEEEE;
 }
 
 .addsec
 {
     display: flex;
     flex-direction: row;
-    margin-top: 4%;
+    margin: 7.5% 2% 0% 2%;
+    color: black;
+    background-color: #EEEEEE;
+    padding: 15px 15px 30px 15px;
+    border-radius: 10px;
 }
 
 .left
 {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    padding-right: 10%;
-    padding-bottom: 29%;
+    margin: 1% 4% 0% 2%;
+    background-color: #ffffff;
+    margin-bottom: auto;
+    padding: 5px 25px 25px 25px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .left img
 {
     width: 350px;
     height: 250px;
+}
+
+.right
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.rright
+{
+    margin-left: 20px;
 }

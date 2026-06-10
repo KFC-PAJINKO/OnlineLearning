@@ -17,7 +17,6 @@
         {
             $s = "select cid, pic, des from info";
         }
-    
     if(isset($_GET['asc']))
     {
         if(isset($_GET['fil']))
@@ -97,7 +96,7 @@
                     </div>
                     <div class="button">
                         <a href="edit.php?id=<?php echo $inf['cid']; ?>">
-                            <input type="button" name="edit" value="Edit">
+                            <input type="button" name="edit" value="edit">
                         </a>
                         <a href="readmore.php?id=<?php echo $inf['cid']; ?>">
                             <input type="button" name="minfo" value="read more">

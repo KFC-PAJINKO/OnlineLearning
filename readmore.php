@@ -49,7 +49,7 @@
                                 <div class="coursetopic">
                                 <?php if($topic = $conn->query($c))
                                         {
-                                            if($topic->num_rows > -1)
+                                            if($topic->num_rows > 0)
                                                 {
                                                     while($topicarray = $topic->fetch_assoc())
                                                     {

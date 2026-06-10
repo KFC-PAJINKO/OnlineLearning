@@ -6,15 +6,74 @@ html, body
     padding: 0;
     height: 100vh;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: rgb(36, 36, 36);
+    align-items: center;
+}
+
+.top
+{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 40px;    
+    height: 100px;
+    background-color: black;
+    gap: 4%;          
+    z-index: 20;
+}
+
+.top form 
+{
+    flex-grow: 1;  
+    display: flex;
+    align-items: center;
+}
+
+.top input
+{
+    width: 100%;          
+    box-sizing: border-box; 
+    padding: 10px;        
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    margin: 0;
+}
+
+.top .pagetag
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 8px;
+    margin-right: 5%;
+    user-select: none;
+    color: rgb(94, 255, 0);
+}
+
+.top a 
+{
+    font-size: 35px;
+    text-decoration: none;
+    color: rgb(94, 255, 0);
+}
+
+.top a:hover
+{
+    color: rgb(0, 213, 0);
 }
 
 .addsec
 {
     display: flex;
     flex-direction: row;
-    margin-top: 3%;
-    margin-left: 100px;
+    margin-top: 6.6%;
+    color: white;
 }
 
 .cinfo form
@@ -26,10 +85,4 @@ html, body
 .cinfo form input[type=submit]
 {
     width: 75px;
-}
-
-.ctopic
-{
-    margin-top: 15px;
-    margin-left: 25px;
 }

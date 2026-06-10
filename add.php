@@ -5,6 +5,16 @@
         <link rel="stylesheet" href="add.css">
     </head>
     <body>
+        <section class="top">
+            <a href="admin.php">Home</a>
+            <a href="login.php">LogOut</a>
+            <form action="admin.php" method="get" enctype="multipart/form-data">
+                <input type="text" name="sbar" placeholder="Search...">
+            </form>
+            <div class="pagetag">
+                <h1>Admin</h1>
+            </div>            
+        </section>
         <section class="addsec">
             <div class="cinfo">
                 <form action="connect.php" method="post" enctype="multipart/form-data">                
@@ -18,20 +28,6 @@
                     <p>submit when finished!</p>
                     <input type="submit" name="submitup" id="submitup">
                 </form>
-            </div>
-            <div class="ctopic">
-                <h1>Add Course Topic</h1>
-                <form action="connect.php" method="post">
-                    <input type="hidden" name="cid" value="<?php echo $inf['cid']; ?>">
-                    <p>TopicName:</p>
-                    <input type="text" name="topicname">
-                    <p>TopicDescription</p>
-                    <input type="text" name="topicdescription">
-                    <input type="submit" name="submittopic" value="submit">
-                </form>
-                <div class="topicshow">
-                    
-                </div>
             </div>
         </section>
     </body>
