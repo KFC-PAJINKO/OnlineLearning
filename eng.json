@@ -1,0 +1,75 @@
+{
+    "login":
+    {
+        "loginusername":"Username:",
+        "loginpassword":"Password:",
+        "loginsubmit":"submit",
+        "createacc":"Create new account"
+    },
+
+    "register":
+    {
+        "regisusername":"Username:",
+        "regispassword":"Password:",
+        "confirmpass":"ConfirmPassword:",
+        "regissubmit":"submit",
+        "alreadyhacc":"Already have an account"
+    },
+    
+    "admin":
+    {
+        "navhome":"Home",
+        "navlogout":"LogOut",
+        "navsearch":"Search...",
+        "navadmin":"Admin",
+
+        "filter":"Filer:",
+        "tfilter":"Type of filter:",
+        "filtasc":"ASC",
+        "filtdesc":"DESC",
+        "filtname":"Name",
+        "filid":"ID",
+
+        "consub":"Subject",
+        "edititem":"Edit",
+        "readmoreitem":"Read more",
+        "deleteitem":"Delete"
+    },
+        
+    "edit":
+    {
+        "curpic":"Current Picture:",
+        "editc":"Edit Course",
+        "upimg":"Upload image",
+        "cname":"CourseName:",
+        "cintro":"CourseIntroduction:",
+        "subtext":"Submit when finish!",
+        "subbot":"Submit",
+        "addt":"Add Topic",
+        "tname":"TopicName:",
+        "tdes":"TopicDescription:",
+        "url":"URL:",
+        "upvid":"UploadVideo:",
+        "subedit":"Submit"
+    },
+
+    "readmore":
+    {
+        "courseintro":"Course Introduction:",
+        "cimg":"Course Image:",
+        "cid":"CourseID:",
+        "cname":"CourseName:",
+        "ctopic":"CourseTopic:"
+    },
+
+    "add":
+    {
+        "addc":"Add Course",
+        "upimg":"Upload Image:",
+        "cname":"CourseName:",
+        "cintro":"CourseIntroduction:",
+        "submittext":"Submit when finish!",
+        "submitbot":"Submit"
+    }
+
+}

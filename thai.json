@@ -1,0 +1,75 @@
+{
+    "login":
+    {
+        "loginusername":"ชื่อผู้ใข้:",
+        "loginpassword":"รหัสผ่าน:",
+        "loginsubmit":"ยืนยัน",
+        "createacc":"สร้างบัญชีใหม่"
+    },
+
+    "register":
+    {
+        "regisusername":"ชื่อผู้ใข้:",
+        "regispassword":"รหัสผ่าน:",
+        "confirmpass":"ยืนยันรหัสผ่าน:",
+        "regissubmit":"ยืนยัน",
+        "alreadyhacc":"มีบัญชีผู้ใช้อยู่เเล้ว"
+    },
+    
+    "admin":
+    {
+        "navhome":"หน้าหลัก",
+        "navlogout":"ออกจากระบบ",
+        "navsearch":"ค้นหา...",
+        "navadmin":"แอดมิน",
+
+        "filter":"ตัวกรอง:",
+        "tfilter":"ประเภทตัวกรอง:",
+        "filtasc":"น้อยไปมาก",
+        "filtdesc":"มากไปน้อย",
+        "filtname":"ชื่อ",
+        "filid":"ไอดี",
+
+        "consub":"วิชา",
+        "edititem":"แก้ไข",
+        "readmoreitem":"อ่านเพิ่มเติม",
+        "deleteitem":"ลบ"
+    },
+        
+    "edit":
+    {
+        "curpic":"รูปปัจจุบัน:",
+        "editc":"แก้ไขคอร์ส",
+        "upimg":"อัปโหลดรูปภาพ",
+        "cname":"ชื่อคอร์ส:",
+        "cintro":"บทนำ:",
+        "subtext":"กดยืนยันเมื่อเสร็จสิ้น",
+        "subbot":"ยืนยัน",
+        "addt":"เพิ่มบทเรียน",
+        "tname":"ชื่อบทเรียน:",
+        "tdes":"เกริ่นนำ:",
+        "url":"URL:",
+        "upvid":"อัปโหลดวิดีโอ:",
+        "subedit":"ยืนยัน"
+    },
+
+    "readmore":
+    {
+        "courseintro":"บทนำ:",
+        "cimg":"รูปปก:",
+        "cid":"คอร์สไอดี:",
+        "cname":"ชื่อคอร์ส:",
+        "ctopic":"บทเรียน:"
+    },
+
+    "add":
+    {
+        "addc":"เพิ่มคอร์ส",
+        "upimg":"อัปโหลดรูปภาพ",
+        "cname":"ชื่อคอร์ส:",
+        "cintro":"บทนำ:",
+        "submittext":"กดยืนยันเมื่อกรอกข้อมูลเรียบร้อย",
+        "submitbot":"ยืนยัน"
+    }
+
+}
