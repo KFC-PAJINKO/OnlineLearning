@@ -185,3 +185,14 @@ html,body
 {
     color:#ff0048
 }
+
+.linkvid a
+{
+    text-decoration: none;
+    color: #CB2957;
+}
+
+.linkvid a:hover
+{
+    color:#ff0048
+}

@@ -74,8 +74,8 @@
             $pic = file_get_contents($tmppic);
             $des = $_POST['descriptext'];
             $desc = $_POST['description'];
-            $stmt = $conn->prepare("insert into info (pic, des, description) values (?,?,?)");
             $null = null;
+            $stmt = $conn->prepare("insert into info (pic, des, description) values (?,?,?)");            
             $stmt -> bind_param("bss",$null,$des,$desc);
             $stmt -> send_long_data(0, $pic);
             $stmt -> execute();
@@ -93,6 +93,7 @@
                     $tmpimg = $_FILES['pic']['tmp_name'];
                     $img = file_get_contents($tmpimg);
                     $e = $conn->prepare("update info set pic = ?, des = ?, description = ? where cid = $id");
+                    $null = null;
                     $e -> bind_param("bss",$null,$name,$description);
                     $e -> send_long_data(0,$img);
                 }
@@ -133,7 +134,8 @@
             if(isset($_POST['url']) && !empty($_POST['url']))
                 {
                     $url = $_POST['url'];
-                    $topic = "insert into topic (topicname, description, status, cid, url) values ('$tname', '$tdes', '$status', '$cid', '$url');";
+                    $vid = null;
+                    $topic = "insert into topic (topicname, description, status, cid, url, vid) values ('$tname', '$tdes', '$status', '$cid', '$url', '$vid');";
                     if($conn -> query($topic) == true)
                         {
                             header("Location: edit.php?id=" . $cid);
@@ -144,27 +146,17 @@
                             echo "Error: " . $d . "<br>" . $conn->error;
                         }
                 }
-            else
-                {
-                    echo "No URL attached";
-                }
-
-            if(isset($_FILES['upvideo']) && !empty($_POST['upvideo']))
+            if(isset($_FILES['upvideo']) && !empty($_FILES['upvideo']))
                 {
                     $tmpvideo= $_FILES['upvideo']['tmp_name'];
                     $vid = file_get_contents($tmpvideo);
-                    $topic = "insert into topic (topicname, description, status, cid, vid) values (?, ?, ?, ?, ?);";
+                    $topic = $conn->prepare("insert into topic (topicname, description, status, cid, vid) values (?, ?, ?, ?, ?);");
                     $null = null;
-                    $stmt -> bind_param("sssib",$tname, $tdes, $status, $cid, $null);
-                    $stmt -> send_long_data(0, $vid);
-                    $stmt -> execute();
+                    $topic -> bind_param("sssib",$tname, $tdes, $status, $cid, $null);
+                    $topic -> send_long_data(4, $vid);
+                    $topic -> execute();
                     header("Location: edit.php?id=" . $cid);
                     exit();                     
                 }
-            else
-                {
-                    echo "No video attached";
-                }
         }
-            
 ?>

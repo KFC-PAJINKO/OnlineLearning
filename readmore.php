@@ -27,7 +27,7 @@
             <?php
                 if($result = $conn->query($q))
                 {
-                    if($result->num_rows >-1)
+                    if($result->num_rows > 0)
                     {
                         $minfo = $result->fetch_assoc();
                         ?>                        
@@ -78,7 +78,7 @@
                                                         if(isset($ta['vid']) && !empty($ta['vid']))
                                                             {
                                                                 echo "<div class='linkvid'>";
-                                                                echo "<a href=video.php>See Video</a>";
+                                                                echo "<a href='video.php?id=". $ta['cid']. "'>See Video</a>";
                                                                 echo "</div>";
                                                             }
                                                         ?>
