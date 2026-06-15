@@ -118,8 +118,8 @@
         <div class="addbutton">
             <a href="add.php">
                 <input type="button" name="addbut" value="+">
-            </a>
-            <script src="translate.js"></script>
+            </a>            
         </div>
+        <script src="translate.js"></script>
     </bodY>
 </html>

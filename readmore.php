@@ -14,15 +14,22 @@
     </head>
     <body>
         <section class="top">
-            <a data-i18n="navhome" href="admin.php">Home</a>
-            <a data-i18n="navlogout" href="login.php">LogOut</a>
+            <a data-i18n="admin.navhome" href="admin.php">Home</a>
+            <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
             <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input data-i18n-placeholder="navsearch" type="text" name="sbar" placeholder="Search...">
+                <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
-                <h1 data-i18n="moreinfo" >Moreinfo</h1>
+                <h1 data-i18n="readmore.moreinfo" >Moreinfo</h1>
             </div>            
         </section>
+        <div class="translate">
+        <label data-i18n="admin.langswitch">Language:</label>
+                <select id="language-switcher">
+                    <option value="eng">Eng</option>
+                    <option value="thai">Thai</option>
+                </select>  
+        </div>
         <section class="info">            
             <?php
                 if($result = $conn->query($q))
@@ -32,21 +39,21 @@
                         $minfo = $result->fetch_assoc();
                         ?>                        
                         <div class='desinfo'>
-                            <h1 data-i18n="courseintro" >Course Introduction: </h1>
+                            <h1 data-i18n="readmore.courseintro" >Course Introduction: </h1>
                             <?php echo "<p>".$minfo['description']."</p>"; ?>
                         </div>
                         <div class='generalinfo'>                            
                             <div class='cpic'>   
-                                <h1 data-i18n="cimg" >Course Image:</h1>     
+                                <h1 data-i18n="readmore.cimg" >Course Image:</h1>     
                                 <div class="cpicborder">                                                 
                                 <?php echo "<img src='data:image/jpeg;base64," . base64_encode($minfo['pic']) . "' alt='Guitar Image'>"; ?>
                                 </div>
                             </div> 
                             <div class='coursecontent'>
                                 <div class="courseinfo">
-                                    <?php echo "<p data-i18n='cid' >CourseID: " . $minfo['cid'] . "</p>"; ?>
-                                    <?php echo "<p data-i18n='cname' >CourseName: " . $minfo['des'] . "</p>"; ?>
-                                    <p data-i18n="ctopic" >CourseTopic:</p>
+                                    <?php echo "<p data-i18n='readmore.cid' >CourseID: " . $minfo['cid'] . "</p>"; ?>
+                                    <?php echo "<p data-i18n='readmore.cname' >CourseName: " . $minfo['des'] . "</p>"; ?>
+                                    <p data-i18n="readmore.ctopic" >CourseTopic:</p>
                                 </div>
                                 <div class="coursetopic">
                                 <?php if($topic = $conn->query($c))
@@ -72,13 +79,13 @@
                                                         if(isset($ta['url']) && !empty($ta['url']))
                                                             {
                                                                 echo "<div class='linkurl'>";
-                                                                echo "<a href=". $ta['url'] . ">Click here</a>";
+                                                                echo "<a data-i18n='readmore.urllink' href=". $ta['url'] . ">Click here</a>";
                                                                 echo "</div>";
                                                             }
                                                         if(isset($ta['vid']) && !empty($ta['vid']))
                                                             {
                                                                 echo "<div class='linkvid'>";
-                                                                echo "<a href='video.php?id=". $ta['cid']. "'>See Video</a>";
+                                                                echo "<a data-i18n='readmore.videolink' href='video.php?id=". $ta['cid']. "'>See Video</a>";
                                                                 echo "</div>";
                                                             }
                                                         ?>
@@ -109,5 +116,6 @@
                 }
                 ?>
         </section>
+        <script src="translate.js"></script>
     </body>
 </html>

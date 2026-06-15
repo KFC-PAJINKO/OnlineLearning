@@ -34,7 +34,7 @@
 
         "langswitch":"Language:",
 
-        "consub":"Subject",
+        "consub":"Subject:",
         "edititem":"Edit",
         "readmoreitem":"Read more",
         "deleteitem":"Delete"
@@ -64,7 +64,9 @@
         "cimg":"Course Image:",
         "cid":"CourseID:",
         "cname":"CourseName:",
-        "ctopic":"CourseTopic:"
+        "ctopic":"CourseTopic:",
+        "urllink":"Click link",
+        "videolink":"see video here"
     },
 
     "add":

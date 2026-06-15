@@ -72,6 +72,11 @@ html,body
     color: #EEEEEE;
 }
 
+#language-switcher
+{
+    margin-top: 18px;
+}
+
 .top a:hover
 {
     color: #EEEEEE;

@@ -25,6 +25,13 @@
                 <h1 data-i18n="admin.navadmin" >Admin</h1>
             </div>            
         </section>
+        <div class="translate">
+            <label data-i18n="admin.langswitch">Language:</label>
+            <select id="language-switcher">
+                <option value="eng">Eng</option>
+                <option value="thai">Thai</option>
+            </select>  
+        </div>
         <section class="addsec"> 
             <?php while($row = $result->fetch_array()): ?>
                 <div class="left">
@@ -87,8 +94,8 @@
                                                 <?= $ta['status'] ?>
                                                 <div class="tbutton">
                                                     <form>
-                                                        <input type="submit" name="edittopic" value="edit">
-                                                        <input type="submit" name="deletetopic" value="delete">
+                                                        <input data-i18n-value="admin.edititem" type="submit" name="edittopic" value="edit">
+                                                        <input data-i18n-value="admin.deleteitem" type="submit" name="deletetopic" value="delete">
                                                     </form>
                                                 </div>
                                             </div>      

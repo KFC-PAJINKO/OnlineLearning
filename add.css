@@ -68,6 +68,11 @@ html, body
     color: #EEEEEE;
 }
 
+.translate
+{
+    display:hidden;
+}
+
 .addsec
 {
     display: flex;

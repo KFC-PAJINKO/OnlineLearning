@@ -37,6 +37,16 @@ html,body
     font-weight: 100;
 }
 
+.translate
+{
+    display:flex;
+    flex-direction: row;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+}
+
 .logincon form
 {
     display: flex;

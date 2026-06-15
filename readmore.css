@@ -68,6 +68,11 @@ html,body
     color: #EEEEEE;
 }
 
+.translate
+{
+        display: none;
+}
+
 .info
 {
     display: flex;

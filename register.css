@@ -20,6 +20,16 @@ html,body
     object-fit: cover;
 }
 
+.translate
+{
+    display:flex;
+    flex-direction: row;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+}
+
 .register
 {
     display: flex;
