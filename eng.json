@@ -32,6 +32,10 @@
         "filtname":"Name",
         "filid":"ID",
 
+        "langswitch":"Language:",
+        "english":"Eng",
+        "thai":"ไทย",
+
         "consub":"Subject",
         "edititem":"Edit",
         "readmoreitem":"Read more",

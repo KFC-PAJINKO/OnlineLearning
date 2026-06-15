@@ -78,9 +78,15 @@
                 <div class="fop">
                     <label data-i18n="tfilter" >type of filter:</label>
                     <select name="fil">
-                        <option data-i18-valuen="filtname" value="des">Name</option>
+                        <option data-i18-value="filtname" value="des">Name</option>
                         <option data-i18n-value="filid" value="cid">ID</option>
                     </select>
+                    <br>
+                    <label data-i18="langswitch">Language:</label>
+                    <select id="language-switcher">
+                        <option data-i18-value="english" value="eng">Eng</option>
+                        <option data-i18-value="thai" value="thai">Thai</option>
+                    </select>                    
                 </div>
             </form>
         </div>
