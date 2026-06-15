@@ -58,34 +58,34 @@
     <bodY>
         <!-- <img src="wallpaper.jpg" alt="wallpaper" class="wallpaper"> -->
         <section class="top">
-            <a data-i18n="navhome" href="admin.php">Home</a>
-            <a data-i18n="navlogout" href="login.php">LogOut</a>
+            <a data-i18n="admin.navhome" href="admin.php">Home</a>
+            <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
             <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input data-i18n-placeholder="navsearch" type="text" name="sbar" placeholder="Search...">
+                <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
-                <h1 data-i18n="navadmin" >Admin</h1>
+                <h1 data-i18n="admin.navadmin" >Admin</h1>
             </div>            
         </section>
         <div class="filter">            
             <form action="admin.php" method="get">
                 <div class="fbut">
-                    <label data-i18n="filter" >Filter</label>
-                    <input data-i18n-value="tfiltasc" type="submit" name="asc" value="asc">
-                    <input data-i18n-value="filtdesc" type="submit" name="desc" value="desc">
+                    <label data-i18n="admin.filter" >Filter</label>
+                    <input data-i18n="admin.filtasc" type="submit" name="asc" value="asc">
+                    <input data-i18n="admin.filtdesc" type="submit" name="desc" value="desc">
                 </div>
                 <br>
                 <div class="fop">
-                    <label data-i18n="tfilter" >type of filter:</label>
+                    <label data-i18n="admin.tfilter" >type of filter:</label>
                     <select name="fil">
-                        <option data-i18-value="filtname" value="des">Name</option>
-                        <option data-i18n-value="filid" value="cid">ID</option>
+                        <option data-i18n="admin.filtname" value="des">Name</option>
+                        <option data-i18n="admin.filid" value="cid">ID</option>
                     </select>
                     <br>
-                    <label data-i18="langswitch">Language:</label>
+                    <label data-i18n="admin.langswitch">Language:</label>
                     <select id="language-switcher">
-                        <option data-i18-value="english" value="eng">Eng</option>
-                        <option data-i18-value="thai" value="thai">Thai</option>
+                        <option value="eng">Eng</option>
+                        <option value="thai">Thai</option>
                     </select>                    
                 </div>
             </form>
@@ -97,19 +97,19 @@
                         <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($inf['pic']) . '" alt="Guitar Image">'; ?>                       
                     </div>
                     <div class="description">
-                        <h3 data-i18n="consub" >Subject:</h3>
+                        <h3 data-i18n="admin.consub" >Subject:</h3>
                         <p><?php echo $inf['des'] ?></p>
                     </div>
                     <div class="button">
                         <a href="edit.php?id=<?php echo $inf['cid']; ?>">
-                            <input data-i18n-value="edititem" type="button" name="edit" value="edit">
+                            <input data-i18n-value="admin.edititem" type="button" name="edit" value="edit">
                         </a>
                         <a href="readmore.php?id=<?php echo $inf['cid']; ?>">
-                            <input data-i18n-value="readmoreitem" type="button" name="minfo" value="read more">
+                            <input data-i18n-value="admin.readmoreitem" type="button" name="minfo" value="read more">
                         </a>
                         <form action="connect.php" method="post">
                             <input type="hidden" name="cid" value="<?php echo $inf['cid']; ?>">
-                            <input data-i18n-value="deleteitem" type="submit" name="delete" value="delete">
+                            <input data-i18n-value="admin.deleteitem" type="submit" name="delete" value="delete">
                         </form>
                     </div>                                               
                 </div>
@@ -119,6 +119,7 @@
             <a href="add.php">
                 <input type="button" name="addbut" value="+">
             </a>
+            <script src="translate.js"></script>
         </div>
     </bodY>
 </html>

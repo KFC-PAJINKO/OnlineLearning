@@ -1,38 +1,46 @@
 document.addEventListener("DOMContentLoaded", () => {
     const switcher = document.getElementById("language-switcher");
 
-    // 1. Function to fetch JSON and update UI text
+    // NEW: Helper function to drill down into nested JSON keys (e.g., "admin.navhome")
+    function getNestedTranslation(obj, path) {
+        return path.split('.').reduce((currentObj, key) => {
+            return currentObj && currentObj[key] !== undefined ? currentObj[key] : null;
+        }, obj);
+    }
+
     async function changeLanguage(lang) {
         try {
             const response = await fetch(`./${lang}.json`);
             if (!response.ok) throw new Error("Could not fetch translation file");
             const translations = await response.json();
 
-            // Translate regular text elements (e.g., <a>, <h1>, <label>, <h3>)
+            // 1. Translate regular text elements
             document.querySelectorAll("[data-i18n]").forEach(element => {
-                const key = element.getAttribute("data-i18n");
-                if (translations[key]) {
-                    element.innerText = translations[key];
+                const path = element.getAttribute("data-i18n");
+                const translatedText = getNestedTranslation(translations, path); // Uses helper
+                if (translatedText) {
+                    element.innerText = translatedText;
                 }
             });
 
-            // Translate placeholder text (e.g., input bars)
+            // 2. Translate placeholder text
             document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
-                const key = element.getAttribute("data-i18n-placeholder");
-                if (translations[key]) {
-                    element.setAttribute("placeholder", translations[key]);
+                const path = element.getAttribute("data-i18n-placeholder");
+                const translatedText = getNestedTranslation(translations, path); // Uses helper
+                if (translatedText) {
+                    element.setAttribute("placeholder", translatedText);
                 }
             });
 
-            // Translate input values (e.g., <input type="button">)
+            // 3. Translate input values (Buttons)
             document.querySelectorAll("[data-i18n-value]").forEach(element => {
-                const key = element.getAttribute("data-i18n-value");
-                if (translations[key]) {
-                    element.value = translations[key];
+                const path = element.getAttribute("data-i18n-value");
+                const translatedText = getNestedTranslation(translations, path); // Uses helper
+                if (translatedText) {
+                    element.value = translatedText;
                 }
             });
 
-            // Save choice in localStorage so it remembers user selection on refresh
             localStorage.setItem("preferred_lang", lang);
 
         } catch (error) {
@@ -40,13 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 2. Event listener for dropdown switch
     switcher.addEventListener("change", (e) => {
         changeLanguage(e.target.value);
     });
 
-    // 3. Load saved language preference on page initialization
-    const savedLang = localStorage.getItem("preferred_lang") || "en";
+    const savedLang = localStorage.getItem("preferred_lang") || "eng";
     switcher.value = savedLang;
     changeLanguage(savedLang);
 });

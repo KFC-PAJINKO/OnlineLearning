@@ -16,52 +16,52 @@
     </head>
     <body>
         <section class="top">
-            <a data-i18n="navhome" href="admin.php">Home</a>
-            <a data-i18n="navlogout" href="login.php">LogOut</a>
+            <a data-i18n="admin.navhome" href="admin.php">Home</a>
+            <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
             <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input data-i18n-placeholder="navsearch" type="text" name="sbar" placeholder="Search...">
+                <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
-                <h1 data-i18n="navadmin" >Admin</h1>
+                <h1 data-i18n="admin.navadmin" >Admin</h1>
             </div>            
         </section>
         <section class="addsec"> 
             <?php while($row = $result->fetch_array()): ?>
                 <div class="left">
-                    <?php echo '<p data-i18n="curpic" >Current Picture: </p>'; ?>
+                    <?php echo '<p data-i18n="edit.curpic" >Current Picture: </p>'; ?>
                     <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['pic']) . '" alt="Guitar Image">'; ?>
                 </div>
                 <div class="right">
                     <div class="rleft">
-                        <h1 data-i18n="editc" >Edit Course</h1>                    
+                        <h1 data-i18n="edit.editc" >Edit Course</h1>                    
                         <form action="connect.php" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="cid" value="<?php echo $row['cid']; ?>">
-                            <p data-i18n="upimg" >Upload image:</p>
+                            <p data-i18n="edit.upimg" >Upload image:</p>
                             <input type="file" name="pic" id="pic">
-                            <p data-i18n="cname" >CourseName:</p>
+                            <p data-i18n="edit.cname" >CourseName:</p>
                             <input type="text" maxlength="25" length="20" name="descriptext" id="descriptext" value="<?php echo $row['des']; ?>">
-                            <p data-i18n="cintro" >CourseIntroduction:</p>
+                            <p data-i18n="edit.cintro" >CourseIntroduction:</p>
                             <textarea cols="50" rows="10" name="description" id="description"><?php echo $row['description']; ?></textarea>
-                            <p data-i18n="subtext" >submit when finish!</p>
+                            <p data-i18n="edit.subtext" >submit when finish!</p>
                             <input type="submit" name="submitedit" id="submitedit">
                         </form>   
                     </div>
                     <div class="rright">
-                        <h1 data-i18n="addt" >Add Topic</h1>
+                        <h1 data-i18n="edit.addt" >Add Topic</h1>
                         <form action="connect.php" method="post" enctype="multipart/form-data">
                             <div class="inputleft">
                                 <input type="hidden" name="cid" value="<?php echo $row['cid']; ?>">
-                                <p data-i18n="tname" >TopicName:</p> 
+                                <p data-i18n="edit.tname" >TopicName:</p> 
                                 <input type="text" name="topicname">
-                                <p data-i18n="tdes" >TopicDescription:</p>
+                                <p data-i18n="edit.tdes" >TopicDescription:</p>
                                 <input type="text" name="topicdescription">
-                                <p data-i18n="url" >URL:</p>
+                                <p data-i18n="edit.url" >URL:</p>
                                 <input type="text" name="url">
                             </div>
                             <div class="inputright">
-                                <p data-i18n="upvid" >UploadVideo:</p>
+                                <p data-i18n="edit.upvid" >UploadVideo:</p>
                                 <input type="file" name="upvideo">                
-                                <input data-i18n-value="subedit" type="submit" name="submittopic" value="submit">
+                                <input data-i18n-value="edit.subedit" type="submit" name="submittopic" value="submit">
                             </div>
                         </form>                
                         <div class="topicitemborder">
@@ -106,5 +106,6 @@
                 </div>
             <?php endwhile; ?> 
         </section>
+        <script src="translate.js"></script>
     </body>
 </html>

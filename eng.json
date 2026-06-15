@@ -27,14 +27,12 @@
 
         "filter":"Filer:",
         "tfilter":"Type of filter:",
-        "filtasc":"ASC",
-        "filtdesc":"DESC",
+        "filtasc":"asc",
+        "filtdesc":"desc",
         "filtname":"Name",
         "filid":"ID",
 
         "langswitch":"Language:",
-        "english":"Eng",
-        "thai":"ไทย",
 
         "consub":"Subject",
         "edititem":"Edit",
