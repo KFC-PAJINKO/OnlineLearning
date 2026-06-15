@@ -1,6 +1,7 @@
 {
     "login":
     {
+        "loginpage":"หน้าล็อกอิน",
         "loginusername":"ชื่อผู้ใข้:",
         "loginpassword":"รหัสผ่าน:",
         "loginsubmit":"ยืนยัน",
@@ -9,6 +10,7 @@
 
     "register":
     {
+        "registerpage":"สร้างบัญชีใหม่",
         "regisusername":"ชื่อผู้ใข้:",
         "regispassword":"รหัสผ่าน:",
         "confirmpass":"ยืนยันรหัสผ่าน:",
@@ -54,7 +56,8 @@
     },
 
     "readmore":
-    {
+    {   
+        "moreinfo":"ข้อมูลเพิ่มเติม",
         "courseintro":"บทนำ:",
         "cimg":"รูปปก:",
         "cid":"คอร์สไอดี:",

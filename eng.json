@@ -1,6 +1,7 @@
 {
     "login":
     {
+        "loginpage":"Login page",
         "loginusername":"Username:",
         "loginpassword":"Password:",
         "loginsubmit":"submit",
@@ -9,6 +10,7 @@
 
     "register":
     {
+         "registerpage":"Register page",
         "regisusername":"Username:",
         "regispassword":"Password:",
         "confirmpass":"ConfirmPassword:",
@@ -55,6 +57,7 @@
 
     "readmore":
     {
+        "moreinfo":"Moreinfo",
         "courseintro":"Course Introduction:",
         "cimg":"Course Image:",
         "cid":"CourseID:",

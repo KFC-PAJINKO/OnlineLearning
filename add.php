@@ -6,27 +6,27 @@
     </head>
     <body>
         <section class="top">
-            <a href="admin.php">Home</a>
-            <a href="login.php">LogOut</a>
+            <a data-i18n="navhome" href="admin.php">Home</a>
+            <a data-i18n="navlogout" href="login.php">LogOut</a>
             <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input type="text" name="sbar" placeholder="Search...">
+                <input data-i18n="navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
-                <h1>Admin</h1>
+                <h1 data-i18n="navadmin" >Admin</h1>
             </div>            
         </section>
         <section class="addsec">
             <div class="cinfo">
                 <form action="connect.php" method="post" enctype="multipart/form-data">                
-                    <h1>Add Course</h1>
-                    <p>Upload image:</p>
+                    <h1 data-i18n="addc" >Add Course</h1>
+                    <p data-i18n="upimg" >Upload image:</p>
                     <input type="file" name="pic" id="pic">
-                    <p>CourseName:</p>
+                    <p data-i18n="cname" >CourseName:</p>
                     <input type="text" maxlength="25" length="20" name="descriptext" id="descriptext">
-                    <p>CourseIntroduction:</p>
+                    <p data-i18n="cintro" >CourseIntroduction:</p>
                     <textarea cols="50" rows="20" name="description" id="description"></textarea>
-                    <p>submit when finished!</p>
-                    <input type="submit" name="submitup" id="submitup">
+                    <p data-i18n="submittext" >submit when finished!</p>
+                    <input data-i18n="submitbot" type="submit" name="submitup" id="submitup">
                 </form>
             </div>
         </section>

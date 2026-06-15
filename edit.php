@@ -16,52 +16,52 @@
     </head>
     <body>
         <section class="top">
-            <a href="admin.php">Home</a>
-            <a href="login.php">LogOut</a>
+            <a data-i18n="navhome" href="admin.php">Home</a>
+            <a data-i18n="navlogout" href="login.php">LogOut</a>
             <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input type="text" name="sbar" placeholder="Search...">
+                <input data-i18n="navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
-                <h1>Admin</h1>
+                <h1 data-i18n="navadmin" >Admin</h1>
             </div>            
         </section>
         <section class="addsec"> 
             <?php while($row = $result->fetch_array()): ?>
                 <div class="left">
-                    <?php echo '<p>Current Picture: </p>'; ?>
+                    <?php echo '<p data-i18n="curpic" >Current Picture: </p>'; ?>
                     <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['pic']) . '" alt="Guitar Image">'; ?>
                 </div>
                 <div class="right">
                     <div class="rleft">
-                        <h1>Edit Course</h1>                    
+                        <h1 data-i18n="editc" >Edit Course</h1>                    
                         <form action="connect.php" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="cid" value="<?php echo $row['cid']; ?>">
-                            <p>Upload image:</p>
+                            <p data-i18n="upimg" >Upload image:</p>
                             <input type="file" name="pic" id="pic">
-                            <p>CourseName:</p>
+                            <p data-i18n="cname" >CourseName:</p>
                             <input type="text" maxlength="25" length="20" name="descriptext" id="descriptext" value="<?php echo $row['des']; ?>">
-                            <p>CourseIntroduction:</p>
+                            <p data-i18n="cintro" >CourseIntroduction:</p>
                             <textarea cols="50" rows="10" name="description" id="description"><?php echo $row['description']; ?></textarea>
-                            <p>submit when finish!</p>
+                            <p data-i18n="subtext" >submit when finish!</p>
                             <input type="submit" name="submitedit" id="submitedit">
                         </form>   
                     </div>
                     <div class="rright">
-                        <h1>Add Topic</h1>
+                        <h1 data-i18n="addt" >Add Topic</h1>
                         <form action="connect.php" method="post" enctype="multipart/form-data">
                             <div class="inputleft">
                                 <input type="hidden" name="cid" value="<?php echo $row['cid']; ?>">
-                                <p>TopicName:</p> 
+                                <p data-i18n="tname" >TopicName:</p> 
                                 <input type="text" name="topicname">
-                                <p>TopicDescription:</p>
+                                <p data-i18n="tdes" >TopicDescription:</p>
                                 <input type="text" name="topicdescription">
-                                <p>URL:</p>
+                                <p data-i18n="url" >URL:</p>
                                 <input type="text" name="url">
                             </div>
                             <div class="inputright">
-                                <p>UploadVideo:</p>
+                                <p data-i18n="upvid" >UploadVideo:</p>
                                 <input type="file" name="upvideo">                
-                                <input type="submit" name="submittopic" value="submit">
+                                <input data-i18n="subedit" type="submit" name="submittopic" value="submit">
                             </div>
                         </form>                
                         <div class="topicitemborder">

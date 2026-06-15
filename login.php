@@ -14,15 +14,15 @@
     <body>
         <img src="background.png" alt="logo" class="logo">
         <section class="login">
-            <h1>Login page</h1>
+            <h1 data-i18n="loginpage">Login page</h1>
             <div class="logincon">                
                 <form action="connect.php" method="post">
-                    <label for="username">Username:</label>
+                    <label data-i18n="loginusername" for="username" >Username:</label>
                     <input type="text" name="username" id="username" size="40">
-                    <label for="password">Password:</label>
+                    <label data-i18n="loginusername" for="password">Password:</label>
                     <input type="text" name="password" id="password">
-                    <input type="submit" name="submit" value="submit" id="submit">
-                    <a href="register.php">Create new account</a>                    
+                    <input data-i18n="loginsubmit" type="submit" name="submit" value="submit" id="submit">
+                    <a data-i18n="createacc" href="register.php">Create new account</a>                    
                 </form>
             </div>
         </section>
