@@ -19,7 +19,7 @@
             <a data-i18n="navhome" href="admin.php">Home</a>
             <a data-i18n="navlogout" href="login.php">LogOut</a>
             <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input data-i18n="navsearch" type="text" name="sbar" placeholder="Search...">
+                <input data-i18n-placeholder="navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
                 <h1 data-i18n="navadmin" >Admin</h1>
@@ -61,7 +61,7 @@
                             <div class="inputright">
                                 <p data-i18n="upvid" >UploadVideo:</p>
                                 <input type="file" name="upvideo">                
-                                <input data-i18n="subedit" type="submit" name="submittopic" value="submit">
+                                <input data-i18n-value="subedit" type="submit" name="submittopic" value="submit">
                             </div>
                         </form>                
                         <div class="topicitemborder">

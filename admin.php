@@ -61,7 +61,7 @@
             <a data-i18n="navhome" href="admin.php">Home</a>
             <a data-i18n="navlogout" href="login.php">LogOut</a>
             <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input data-i18n="navsearch" type="text" name="sbar" placeholder="Search...">
+                <input data-i18n-placeholder="navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
                 <h1 data-i18n="navadmin" >Admin</h1>
@@ -71,15 +71,15 @@
             <form action="admin.php" method="get">
                 <div class="fbut">
                     <label data-i18n="filter" >Filter</label>
-                    <input data-i18n="tfiltasc" type="submit" name="asc" value="asc">
-                    <input data-i18n="filtdesc" type="submit" name="desc" value="desc">
+                    <input data-i18n-value="tfiltasc" type="submit" name="asc" value="asc">
+                    <input data-i18n-value="filtdesc" type="submit" name="desc" value="desc">
                 </div>
                 <br>
                 <div class="fop">
                     <label data-i18n="tfilter" >type of filter:</label>
                     <select name="fil">
-                        <option data-i18n="filtname" value="des">Name</option>
-                        <option data-i18n="filid" value="cid">ID</option>
+                        <option data-i18-valuen="filtname" value="des">Name</option>
+                        <option data-i18n-value="filid" value="cid">ID</option>
                     </select>
                 </div>
             </form>
@@ -96,14 +96,14 @@
                     </div>
                     <div class="button">
                         <a href="edit.php?id=<?php echo $inf['cid']; ?>">
-                            <input data-i18n="edititem" type="button" name="edit" value="edit">
+                            <input data-i18n-value="edititem" type="button" name="edit" value="edit">
                         </a>
                         <a href="readmore.php?id=<?php echo $inf['cid']; ?>">
-                            <input data-i18n="readmoreitem" type="button" name="minfo" value="read more">
+                            <input data-i18n-value="readmoreitem" type="button" name="minfo" value="read more">
                         </a>
                         <form action="connect.php" method="post">
                             <input type="hidden" name="cid" value="<?php echo $inf['cid']; ?>">
-                            <input data-i18n="deleteitem" type="submit" name="delete" value="delete">
+                            <input data-i18n-value="deleteitem" type="submit" name="delete" value="delete">
                         </form>
                     </div>                                               
                 </div>

@@ -21,7 +21,7 @@
                     <input type="text" name="username" id="username" size="40">
                     <label data-i18n="loginusername" for="password">Password:</label>
                     <input type="text" name="password" id="password">
-                    <input data-i18n="loginsubmit" type="submit" name="submit" value="submit" id="submit">
+                    <input data-i18n-value="loginsubmit" type="submit" name="submit" value="submit" id="submit">
                     <a data-i18n="createacc" href="register.php">Create new account</a>                    
                 </form>
             </div>

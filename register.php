@@ -16,7 +16,7 @@
                     <input type="text" name="passwordregis" id="password">
                     <label data-i18n="confirmpass"  for="confirmpassword">ConfirmPassword</label>
                     <input type="text" name="confirmpassword" id="confirmpassword">
-                    <input data-i18n="regissubmit" type="submit" name="submitregis" value="submit" id="submit">    
+                    <input data-i18n-value="regissubmit" type="submit" name="submitregis" value="submit" id="submit">    
                     <a data-i18n="regissubmit" href="login.php">Already have an account?</a>          
                 </form>
             </div>

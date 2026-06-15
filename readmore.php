@@ -17,7 +17,7 @@
             <a data-i18n="navhome" href="admin.php">Home</a>
             <a data-i18n="navlogout" href="login.php">LogOut</a>
             <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input data-i18n="navsearch" type="text" name="sbar" placeholder="Search...">
+                <input data-i18n-placeholder="navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
                 <h1 data-i18n="moreinfo" >Moreinfo</h1>

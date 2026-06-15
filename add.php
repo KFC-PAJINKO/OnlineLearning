@@ -9,7 +9,7 @@
             <a data-i18n="navhome" href="admin.php">Home</a>
             <a data-i18n="navlogout" href="login.php">LogOut</a>
             <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input data-i18n="navsearch" type="text" name="sbar" placeholder="Search...">
+                <input data-i18n-placeholder="navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
                 <h1 data-i18n="navadmin" >Admin</h1>
@@ -26,7 +26,7 @@
                     <p data-i18n="cintro" >CourseIntroduction:</p>
                     <textarea cols="50" rows="20" name="description" id="description"></textarea>
                     <p data-i18n="submittext" >submit when finished!</p>
-                    <input data-i18n="submitbot" type="submit" name="submitup" id="submitup">
+                    <input data-i18n-value="submitbot" type="submit" name="submitup" id="submitup">
                 </form>
             </div>
         </section>
