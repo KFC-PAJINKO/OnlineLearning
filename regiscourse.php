@@ -6,23 +6,40 @@
         <link rel="stylesheet" href="regiscourse.css">
     </head>
     <body>
-        <section class="top">
-            <a href="user.php">Home</a>
-            <a href="login.php">LogOut</a>
-            <form action="user.php" method="get" enctype="multipart/form-data">
-                <input type="text" name="sbar" placeholder="Search...">
+       <section class="top">
+            <a data-i18n="admin.navhome" href="admin.php">Home</a>
+            <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
+            <form action="admin.php" method="get" enctype="multipart/form-data">
+                <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
-                <h1>User</h1>
+                <h1 data-i18n="admin.navadmin" >Admin</h1>
+                <div class="changelang">
+                    <select id="language-switcher">
+                        <option value="eng">Eng</option>
+                        <option value="thai">Thai</option>
+                    </select>  
+                </div>
             </div>            
         </section>
         <section class="fillform">
             <form action="connect.php" method="post">
-                <p>FirstName: </p>
+                <label>FirstName: </label>
                 <input type="text" name="fname">
-                <p>LastName: </p>
+                <label>LastName: </label>
                 <input type="text" name="lname">
-                <input type="submit" name="recoursesubmit" value="submit">
+                <br>
+                <label>PhoneNumber:</label>
+                <input type="text" name="phonenum">
+                <label>StudyType:</label>
+                <select name="studytype">
+                    <option value="online">Online</option>
+                    <option value="onsite">Onsite</option>
+                </select>
+                <br>
+                <div class="submitbut">
+                    <input type="submit" name="recoursesubmit" value="submit">
+                </div>
             </form>
         </section>
     </body>

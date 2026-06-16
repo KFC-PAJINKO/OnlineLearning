@@ -67,6 +67,14 @@ html, body
     color: #EEEEEE;
 }
 
+.top .changelang
+{
+    display: flex;
+    margin-left: 35px;
+    padding-top: 12px;
+    padding-bottom: 25px;
+}
+
 .translate
 {
     display:flex;

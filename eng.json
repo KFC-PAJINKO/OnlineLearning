@@ -77,6 +77,12 @@
         "cintro":"CourseIntroduction:",
         "submittext":"Submit when finish!",
         "submitbot":"Submit"
-    }
+    },
 
+    "user":
+    {
+        "userpage":"User",
+        "regis":"Register"
+    }
+    
 }

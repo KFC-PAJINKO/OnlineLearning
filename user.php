@@ -58,13 +58,19 @@
     </head>
     <bodY>
         <section class="top">
-            <a data-i18n="admin.navhome" href="user.php">Home</a>
+            <a data-i18n="admin.navhome" href="admin.php">Home</a>
             <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
-            <form action="user.php" method="get" enctype="multipart/form-data">
+            <form action="admin.php" method="get" enctype="multipart/form-data">
                 <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
             </form>
             <div class="pagetag">
-                <h1 data-i18n="user.userpage" >User</h1>
+                <h1 data-i18n="admin.navadmin" >Admin</h1>
+                <div class="changelang">
+                    <select id="language-switcher">
+                        <option value="eng">Eng</option>
+                        <option value="thai">Thai</option>
+                    </select>  
+                </div>
             </div>            
         </section>
         <div class="filter">            
@@ -80,12 +86,6 @@
                     <select name="fil">
                         <option value="des">Name</option>
                         <option value="cid">ID</option>
-                    </select>
-                    <br>
-                    <label data-i18n="admin.langswitch">Language:</label>
-                    <select id="language-switcher">
-                        <option value="eng">Eng</option>
-                        <option value="thai">Thai</option>
                     </select>
                 </div>
             </form>

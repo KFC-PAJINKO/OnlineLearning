@@ -65,6 +65,12 @@
             </form>
             <div class="pagetag">
                 <h1 data-i18n="admin.navadmin" >Admin</h1>
+                <div class="changelang">
+                    <select id="language-switcher">
+                        <option value="eng">Eng</option>
+                        <option value="thai">Thai</option>
+                    </select>  
+                </div>
             </div>            
         </section>
         <div class="filter">            
@@ -81,12 +87,6 @@
                         <option data-i18n="admin.filtname" value="des">Name</option>
                         <option data-i18n="admin.filid" value="cid">ID</option>
                     </select>
-                    <br>
-                    <label data-i18n="admin.langswitch">Language:</label>
-                    <select id="language-switcher">
-                        <option value="eng">Eng</option>
-                        <option value="thai">Thai</option>
-                    </select>                    
                 </div>
             </form>
         </div>

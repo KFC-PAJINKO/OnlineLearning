@@ -23,15 +23,14 @@
             </form>
             <div class="pagetag">
                 <h1 data-i18n="admin.navadmin" >Admin</h1>
+                <div class="changelang">
+                    <select id="language-switcher">
+                        <option value="eng">Eng</option>
+                        <option value="thai">Thai</option>
+                    </select>  
+                </div>
             </div>            
         </section>
-        <div class="translate">
-            <label data-i18n="admin.langswitch">Language:</label>
-            <select id="language-switcher">
-                <option value="eng">Eng</option>
-                <option value="thai">Thai</option>
-            </select>  
-        </div>
         <section class="addsec"> 
             <?php while($row = $result->fetch_array()): ?>
                 <div class="left">

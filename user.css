@@ -72,15 +72,19 @@ html,body
     color: #EEEEEE;
 }
 
-#language-switcher
-{
-    margin-top: 18px;
-}
-
 .top a:hover
 {
     color: #EEEEEE;
 }
+
+.top .changelang
+{
+    display: flex;
+    margin-left: 35px;
+    padding-top: 12px;
+    padding-bottom: 25px;
+}
+
 
 .filter
 {
