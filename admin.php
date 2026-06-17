@@ -66,6 +66,8 @@
             <div class="pagetag">
                 <h1 data-i18n="admin.navadmin" >Admin</h1>
                 <div class="changelang">
+                    <script src="langicon.js"></script>
+                    <img src="eng.png" id="langimg">
                     <select id="language-switcher">
                         <option value="eng">Eng</option>
                         <option value="thai">Thai</option>

@@ -85,6 +85,14 @@ html,body
     padding-bottom: 25px;
 }
 
+#langimg
+{
+    margin-top: 17px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
 .filter
 {
     display:flex;
