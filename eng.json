@@ -24,6 +24,8 @@
         "navlogout":"LogOut",
         "navsearch":"Search...",
         "navadmin":"Admin",
+        "navcontactus":"Contact us",
+        "navcategories":"Categories",
 
         "filter":"Filer:",
         "tfilter":"Type of filter:",

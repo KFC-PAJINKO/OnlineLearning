@@ -54,9 +54,8 @@
         <meta charset="UTF-8">
         <title>Admin page</title>
         <link rel="stylesheet" href="admin.css">
-    </head>
+        </head>
     <bodY>
-        <!-- <img src="wallpaper.jpg" alt="wallpaper" class="wallpaper"> -->
         <section class="top">
             <a data-i18n="admin.navhome" href="admin.php">Home</a>
             <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
@@ -75,6 +74,9 @@
                 </div>
             </div>            
         </section>
+
+        <script src="langicon.js"></script>
+
         <div class="filter">            
             <form action="admin.php" method="get">
                 <div class="fbut">
