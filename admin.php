@@ -7,6 +7,7 @@
     require('connect.php');
     $info = [];
     $promo = [];
+    $popular = [];
 
  
     if (isset($_GET['sbar']) && !empty(trim($_GET['sbar']))) 
@@ -55,6 +56,16 @@
             while($prorow = $proresult->fetch_assoc())
                 {
                     $promo[] = $prorow;
+                }
+        }
+
+    $pop = "select cid, pic, des, description from info limit 4";
+
+    if($popresult = $conn->query($pop))
+        {
+            while($poprow = $popresult->fetch_assoc())
+                {
+                    $popular[] = $poprow;
                 }
         }
 ?>
@@ -113,9 +124,16 @@
         </div>
         <section class="content">
             <div class="promotion">
-                <p>promotion</p>
+                <p>Promotion:</p>
                 <input type="button" value=">" id="next">
                 <input type="button" value="<" id="back">
+                <a href="add.php">
+                    <input type="submit" value="+" id="add">
+                </a>
+                    <input type="submit" value="-" id="del">
+                <a href="edit.php">
+                    <input type="submit" value="e" id="edit">
+                </a>
                 <?php foreach ($promo as $prom): ?>
                     <div class="procard">
                         <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($prom['pic']) . '" alt="promotion Image">'; ?>
@@ -126,8 +144,23 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+            <p id="popp">Popular Course:</p>
             <div class="popcourse">
-                <p>popularcourse</p>
+                <?php foreach ($popular as $pop): ?>
+                    <div class="popc">
+                        <div class="popcinfo">
+                            <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($pop['pic']) . '" alt="promotion Image">'; ?>
+                            <div class="popdes">
+                                <p><?php echo $pop['des'] ?></p>
+                                <p><?php echo $pop['description'] ?></p>
+                            </div>
+                        </div>
+                        <div class="poprate">
+                            <img src="star.png">
+                            <label>4.5</label>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
             <div class="consubcon">
                 <?php foreach ($info as $inf): ?>
