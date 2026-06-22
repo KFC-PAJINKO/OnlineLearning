@@ -136,7 +136,7 @@
                 </a>
                 <?php foreach ($promo as $prom): ?>
                     <div class="procard">
-                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($prom['pic']) . '" alt="promotion Image">'; ?>
+                        <img src="math.jpg">
                         <div class="prodes">
                             <p><?php echo $prom['pname'] ?></p>
                             <p><?php echo $prom['pdes'] ?></p>

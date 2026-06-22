@@ -227,13 +227,16 @@ html,body
 
 .procard img
 {
-    padding-right: 200px;
+    width: 350px;
+    height: 175px;
+    padding-right: 100px;
 }
 
 .prodes
 {
     display: flex;
     flex-direction: column;
+    font-size: 20px;
 }
 
 #popp
