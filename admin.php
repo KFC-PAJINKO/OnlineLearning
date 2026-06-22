@@ -114,6 +114,8 @@
         <section class="content">
             <div class="promotion">
                 <p>promotion</p>
+                <input type="button" value=">" id="next">
+                <input type="button" value="<" id="back">
                 <?php foreach ($promo as $prom): ?>
                     <div class="procard">
                         <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($prom['pic']) . '" alt="promotion Image">'; ?>

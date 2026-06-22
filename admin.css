@@ -167,6 +167,29 @@ html,body
 .promotion
 {
     color: white;
+    position: relative;
+}
+
+#next
+{
+    position: absolute;
+    right: -35px;
+    top: 155px;
+}
+
+#back
+{
+    position: absolute;
+    left: -35px;
+    top: 155px;
+}
+
+.promotion input[type="button"]
+{
+    width: 20px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
 }
 
 .procard
