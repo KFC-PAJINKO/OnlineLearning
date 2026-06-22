@@ -56,25 +56,30 @@
         <link rel="stylesheet" href="admin.css">
         </head>
     <bodY>
-        <section class="top">
-            <a data-i18n="admin.navhome" href="admin.php">Home</a>
-            <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
-            <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
-            </form>
-            <div class="pagetag">
-                <h1 data-i18n="admin.navadmin" >Admin</h1>
-                <div class="changelang">
-                    <script src="langicon.js"></script>
-                    <img src="eng.png" id="langimg">
-                    <select id="language-switcher">
-                        <option value="eng">Eng</option>
-                        <option value="thai">Thai</option>
-                    </select>  
-                </div>
-            </div>            
+        <section class="navbar">
+            <section class="topup">
+                <a data-i18n="admin.navcontactus" href="contactus.php">Contact us</a>
+                <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
+            </section>
+            <section class="top">
+                <a data-i18n="admin.navhome" href="admin.php">Home</a>
+                <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
+                <form action="admin.php" method="get" enctype="multipart/form-data">
+                    <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
+                </form>
+                <div class="pagetag">
+                    <p data-i18n="admin.navadmin" >Admin</p>
+                    <div class="changelang">
+                        <script src="langicon.js"></script>
+                        <img src="eng.png" id="langimg">
+                        <select id="language-switcher">
+                            <option value="eng">Eng</option>
+                            <option value="thai">Thai</option>
+                        </select>  
+                    </div>
+                </div>            
+            </section>
         </section>
-
         <script src="langicon.js"></script>
 
         <div class="filter">            
