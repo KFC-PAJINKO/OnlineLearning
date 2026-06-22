@@ -155,10 +155,54 @@ html,body
 .content
 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 3%;
+    z-index: 10;
+    gap: auto;
+    flex-wrap: wrap;
+}
+
+.promotion
+{
+    color: white;
+}
+
+.procard
+{
+    display: flex;
+    flex-direction: row;
+    background-color: #1E1E1E;
+    width: 1200px;
+    height: 250px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.procard img
+{
+    padding-right: 200px;
+}
+
+.prodes
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.popcourse
+{
+    color: white;
+}
+
+.consubcon
+{
+    display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 140px;
-    margin-left: 3%;
+    margin-top: 150px;
     z-index: 10;
     gap: auto;
     flex-wrap: wrap;

@@ -6,6 +6,7 @@
 
     require('connect.php');
     $info = [];
+    $promo = [];
 
  
     if (isset($_GET['sbar']) && !empty(trim($_GET['sbar']))) 
@@ -46,6 +47,16 @@
                     $info[] = $row;
                 }
         }   
+
+    $pro = "select * from promotion";
+
+    if($proresult = $conn->query($pro))
+        {
+            while($prorow = $proresult->fetch_assoc())
+                {
+                    $promo[] = $prorow;
+                }
+        }
 ?>
 
 <!DOCTYPE html>
@@ -80,6 +91,7 @@
                 </div>            
             </section>
         </section>
+
         <script src="langicon.js"></script>
 
         <div class="filter">            
@@ -100,29 +112,46 @@
             </form>
         </div>
         <section class="content">
-            <?php foreach ($info as $inf): ?>
-                <div class="subcon">                
-                    <div class="itemimg">
-                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($inf['pic']) . '" alt="Guitar Image">'; ?>                       
+            <div class="promotion">
+                <p>promotion</p>
+                <?php foreach ($promo as $prom): ?>
+                    <div class="procard">
+                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($prom['pic']) . '" alt="promotion Image">'; ?>
+                        <div class="prodes">
+                            <p><?php echo $prom['pname'] ?></p>
+                            <p><?php echo $prom['pdes'] ?></p>
+                        </div>
                     </div>
-                    <div class="description">
-                        <h3 data-i18n="admin.consub" >Subject:</h3>
-                        <p><?php echo $inf['des'] ?></p>
+                <?php endforeach; ?>
+            </div>
+            <div class="popcourse">
+                <p>popularcourse</p>
+            </div>
+            <div class="consubcon">
+                <?php foreach ($info as $inf): ?>
+                    <div class="subcon">                
+                        <div class="itemimg">
+                            <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($inf['pic']) . '" alt="Guitar Image">'; ?>                       
+                        </div>
+                        <div class="description">
+                            <h3 data-i18n="admin.consub" >Subject:</h3>
+                            <p><?php echo $inf['des'] ?></p>
+                        </div>
+                        <div class="button">
+                            <a href="edit.php?id=<?php echo $inf['cid']; ?>">
+                                <input data-i18n-value="admin.edititem" type="button" name="edit" value="edit">
+                            </a>
+                            <a href="readmore.php?id=<?php echo $inf['cid']; ?>">
+                                <input data-i18n-value="admin.readmoreitem" type="button" name="minfo" value="read more">
+                            </a>
+                            <form action="connect.php" method="post">
+                                <input type="hidden" name="cid" value="<?php echo $inf['cid']; ?>">
+                                <input data-i18n-value="admin.deleteitem" type="submit" name="delete" value="delete">
+                            </form>
+                        </div>                                               
                     </div>
-                    <div class="button">
-                        <a href="edit.php?id=<?php echo $inf['cid']; ?>">
-                            <input data-i18n-value="admin.edititem" type="button" name="edit" value="edit">
-                        </a>
-                        <a href="readmore.php?id=<?php echo $inf['cid']; ?>">
-                            <input data-i18n-value="admin.readmoreitem" type="button" name="minfo" value="read more">
-                        </a>
-                        <form action="connect.php" method="post">
-                            <input type="hidden" name="cid" value="<?php echo $inf['cid']; ?>">
-                            <input data-i18n-value="admin.deleteitem" type="submit" name="delete" value="delete">
-                        </form>
-                    </div>                                               
-                </div>
-            <?php endforeach; ?>            
+                <?php endforeach; ?> 
+            </div>           
         </section>
         <div class="addbutton">
             <a href="add.php">
