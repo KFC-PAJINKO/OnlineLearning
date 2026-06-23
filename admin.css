@@ -135,7 +135,7 @@ html,body
     flex-direction: column;
     position: fixed;
     justify-content: end;
-    top: 100px; 
+    top: 500px; 
     right: 20px;
     z-index: 15;
     color: white;
@@ -162,33 +162,50 @@ html,body
     z-index: 10;
     gap: auto;
     flex-wrap: wrap;
+    color: white;
 }
 
 .promotion
 {
     color: white;
     position: relative;
+    margin-top: 20px;
+}
+
+/* Creates the 1200px wide frame and hides the extra cards */
+.slider-viewport {
+    width: 1200px;
+    overflow: hidden;
+    border-radius: 20px; /* Keeps the rounded corners clean */
+}
+
+/* Lines all cards up in a single horizontal row */
+.promo-slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out; /* Creates the smooth sliding animation */
+    width: max-content;
 }
 
 #next
 {
     position: absolute;
     right: -35px;
-    top: 155px;
+    top: 100px;
 }
 
 #back
 {
     position: absolute;
     left: -35px;
-    top: 155px;
+    top: 100px;
 }
 
 #add
 {
     position: absolute;
     right: 0px;
-    top: 40px;
+    top: -10px;
 }
 
 #del
@@ -223,13 +240,14 @@ html,body
     border-radius: 20px;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0; /* CRITICAL: Prevents cards from shrinking to fit the viewport */
 }
 
 .procard img
 {
     width: 350px;
     height: 175px;
-    padding-right: 100px;
+    padding-right: 50px;
 }
 
 .prodes
@@ -237,6 +255,7 @@ html,body
     display: flex;
     flex-direction: column;
     font-size: 20px;
+    padding-bottom: 45px;
 }
 
 #popp
@@ -263,6 +282,17 @@ html,body
     display: flex;
     flex-direction: column;
     align-items: center;;
+}
+
+.popcinfo .picborder
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    width: 250px;
+    padding: 15px 0px 15px 0px;
 }
 
 .popcinfo img
@@ -388,5 +418,6 @@ html,body
 
 .button input:hover
 {
-    color: orange;
+    color: rgb(255, 255, 255);
+    background-color: #d0d0d0;
 }

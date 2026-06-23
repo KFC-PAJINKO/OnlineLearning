@@ -122,34 +122,41 @@
                 </div>
             </form>
         </div>
+        
         <section class="content">
             <div class="promotion">
-                <p>Promotion:</p>
                 <input type="button" value=">" id="next">
                 <input type="button" value="<" id="back">
-                <a href="add.php">
+                <a href="addpromotion.php">
                     <input type="submit" value="+" id="add">
                 </a>
-                    <input type="submit" value="-" id="del">
+                <input type="submit" value="-" id="del">
                 <a href="edit.php">
                     <input type="submit" value="e" id="edit">
                 </a>
-                <?php foreach ($promo as $prom): ?>
-                    <div class="procard">
-                        <img src="math.jpg">
-                        <div class="prodes">
-                            <p><?php echo $prom['pname'] ?></p>
-                            <p><?php echo $prom['pdes'] ?></p>
-                        </div>
+                <div class="slider-viewport">
+                    <div class="promo-slider-wrapper"></div>
+                        <?php foreach ($promo as $prom): ?>
+                            <div class="procard">
+                                <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($prom['pic']) . '" alt="promotion Image">'; ?>
+                                <div class="prodes">
+                                    <h1><?php echo $prom['pname'] ?></h1>
+                                    <p><?php echo $prom['pdes'] ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                <?php endforeach; ?>
+                </div>                
+                <script src="proslide.js"></script>
             </div>
-            <p id="popp">Popular Course:</p>
+            <h1 id="popp" data-i18n="admin.popcourse">Popular Course🔥🔥🔥:</h1>
             <div class="popcourse">
                 <?php foreach ($popular as $pop): ?>
                     <div class="popc">
                         <div class="popcinfo">
-                            <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($pop['pic']) . '" alt="promotion Image">'; ?>
+                            <div class="picborder">
+                                <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($pop['pic']) . '" alt="promotion Image">'; ?>
+                            </div>                            
                             <div class="popdes">
                                 <p><?php echo $pop['des'] ?></p>
                                 <p><?php echo $pop['description'] ?></p>

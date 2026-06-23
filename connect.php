@@ -82,6 +82,22 @@
             header("location:admin.php");
             exit();
         }
+
+     if(isset($_POST['submitpro']))
+        {
+            $tmppic = $_FILES['pic']['tmp_name'];
+            $pic = file_get_contents($tmppic);
+            $pname = $_POST['proname'];
+            $pdes = $_POST['prodes'];
+            $pro = $_POST['pro'];
+            $null = null;
+            $stmt = $conn->prepare("insert into promotion (pname, pdes, pro, pic) values (?,?,?,?)");            
+            $stmt -> bind_param("sssb", $pname, $pdes, $pro, $null);
+            $stmt -> send_long_data(3, $pic);
+            $stmt -> execute();
+            header("location:admin.php");
+            exit();
+        }
     
     if(isset($_POST['submitedit']))
         {
