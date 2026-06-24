@@ -9,6 +9,11 @@ html,body
     background-color: #CB2957;
     background-image: url('wallpaper.jpg');
     background-size: cover;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    
 }
 
 .navbar
@@ -135,10 +140,10 @@ html,body
     flex-direction: column;
     position: fixed;
     justify-content: end;
-    top: 500px; 
-    right: 20px;
     z-index: 15;
     color: white;
+    top: 20px;
+    right: 50px;
 
 }
 
@@ -174,7 +179,7 @@ html,body
 
 .slider-viewport {
     width: 1200px;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 20px;
 }
 
@@ -183,20 +188,37 @@ html,body
     flex-direction: row;
     transition: transform 0.5s ease-in-out;
     width: max-content;
+    gap: 30px;
+}
+
+.promotion input:hover
+{
+    opacity: 1;
 }
 
 #next
 {
     position: absolute;
     right: -35px;
-    top: 100px;
+    top: 170px;
+    opacity: 60%;
+    font-family: monospace;
+    z-index: 100;
 }
 
 #back
 {
     position: absolute;
     left: -35px;
-    top: 100px;
+    top: 170px;
+    opacity: 60%;
+    font-family: monospace;
+    z-index: 100;
+}
+
+#next:hover, #back:hover 
+{
+    opacity: 1; 
 }
 
 #add
@@ -232,20 +254,31 @@ html,body
 {
     display: flex;
     flex-direction: row;
-    background-color: #1E1E1E;
     width: 1200px;
     height: 250px;
     border-radius: 20px;
     align-items: center;
-    justify-content: center;
     flex-shrink: 0;
+    opacity: 0.5; /* Makes all cards faded by default */
+    transition: opacity 0.5s ease-in-out; /* Makes the fade look smooth */
 }
 
-.procard img
+/* The special class for the current card */
+.procard.active {
+    opacity: 1; /* Fully visible */
+}
+
+.procardimg
+{   
+    justify-content: center;
+    width: 60%;
+}
+
+.procardimg img
 {
-    width: 350px;
-    height: 175px;
-    padding-right: 50px;
+    width: 1200px;
+    height: 450px;
+    margin-top: 180px;
 }
 
 .prodes
@@ -253,13 +286,19 @@ html,body
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    padding-bottom: 45px;
+    width: 100%;
+    padding-right: 100px;
+    z-index: 100;
 }
 
 #popp
 {
     color: white;
     margin-top: 50px;
+    font-weight: 600px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    z-index: 900;
+    margin-top: 220px;
 }
 
 .popcourse
@@ -271,7 +310,8 @@ html,body
     justify-content: center;
     position: relative;
     box-sizing: border-box;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-right: 40px;
     gap: 15px;
 }
 
@@ -304,9 +344,9 @@ html,body
     display: flex;
     flex-direction: column;
     background-color: #000000;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 300px;
-    height: 350px;
+    height: 365px;
     padding: 30px 20px 20px 20px;
     position: relative;
 }

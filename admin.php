@@ -138,7 +138,9 @@
                     <div class="promo-slider-wrapper">
                         <?php foreach ($promo as $prom): ?>
                             <div class="procard">
+                                <div class="procardimg">                              
                                 <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($prom['pic']) . '" alt="promotion Image">'; ?>
+                                </div>  
                                 <div class="prodes">
                                     <h1><?php echo $prom['pname'] ?></h1>
                                     <p><?php echo $prom['pdes'] ?></p>
