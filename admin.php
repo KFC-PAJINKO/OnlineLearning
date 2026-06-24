@@ -152,50 +152,92 @@
                 <script src="proslide.js"></script>
             </div>
             <h1 id="popp" data-i18n="admin.popcourse">Popular Course🔥🔥🔥:</h1>
-            <div class="popcourse">
-                <?php foreach ($popular as $pop): ?>
-                    <div class="popc">
-                        <div class="popcinfo">
-                            <div class="picborder">
-                                <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($pop['pic']) . '" alt="promotion Image">'; ?>
-                            </div>                            
-                            <div class="popdes">
-                                <p><?php echo $pop['des'] ?></p>
-                                <p><?php echo $pop['description'] ?></p>
+            <div class="pcline">
+                <div class="popcourse">
+                    <?php foreach ($popular as $pop): ?>
+                        <div class="popc">
+                            <div class="popcinfo">
+                                <div class="picborder">
+                                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($pop['pic']) . '" alt="promotion Image">'; ?>
+                                </div>                            
+                                <div class="popdes">
+                                    <p><?php echo $pop['des'] ?></p>
+                                    <p><?php echo $pop['description'] ?></p>
+                                </div>
+                            </div>
+                            <div class="poprate">
+                                <img src="star.png">
+                                <label>4.5</label>
                             </div>
                         </div>
-                        <div class="poprate">
-                            <img src="star.png">
-                            <label>4.5</label>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </div>
+                <div class="pclinehr">
+                    <hr>
+                </div>
             </div>
             <div class="consubcon">
-                <?php foreach ($info as $inf): ?>
-                    <div class="subcon">                
-                        <div class="itemimg">
-                            <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($inf['pic']) . '" alt="Guitar Image">'; ?>                       
-                        </div>
-                        <div class="description">
-                            <h3 data-i18n="admin.consub" >Subject:</h3>
-                            <p><?php echo $inf['des'] ?></p>
-                        </div>
-                        <div class="button">
-                            <a href="edit.php?id=<?php echo $inf['cid']; ?>">
-                                <input data-i18n-value="admin.edititem" type="button" name="edit" value="edit">
-                            </a>
-                            <a href="readmore.php?id=<?php echo $inf['cid']; ?>">
-                                <input data-i18n-value="admin.readmoreitem" type="button" name="minfo" value="read more">
-                            </a>
-                            <form action="connect.php" method="post">
-                                <input type="hidden" name="cid" value="<?php echo $inf['cid']; ?>">
-                                <input data-i18n-value="admin.deleteitem" type="submit" name="delete" value="delete">
-                            </form>
-                        </div>                                               
+                <div class="contentwrap">
+                    <h1>Other Course</h1>
+                    <div class="contentscroll">
+                        <?php foreach ($info as $inf): ?>
+                            <div class="subcon">                
+                                <div class="itemimg">
+                                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($inf['pic']) . '" alt="Guitar Image">'; ?>                       
+                                </div>
+                                <div class="desbutton">
+                                    <div class="description">
+                                        <h3 data-i18n="admin.consub" >Subject:</h3>
+                                        <p><?php echo $inf['des'] ?></p>
+                                    </div>
+                                    <div class="button">
+                                        <a href="edit.php?id=<?php echo $inf['cid']; ?>">
+                                            <input data-i18n-value="admin.edititem" type="button" name="edit" value="edit">
+                                        </a>
+                                        <a href="readmore.php?id=<?php echo $inf['cid']; ?>">
+                                            <input data-i18n-value="admin.readmoreitem" type="button" name="minfo" value="read more">
+                                        </a>
+                                        <form action="connect.php" method="post">
+                                            <input type="hidden" name="cid" value="<?php echo $inf['cid']; ?>">
+                                            <input data-i18n-value="admin.deleteitem" type="submit" name="delete" value="delete">
+                                        </form>
+                                    </div> 
+                                </div>                                           
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                <?php endforeach; ?> 
-            </div>           
+                </div> 
+                <div class="contentwrap">
+                    <h1>You may interest</h1>
+                    <div class="contentscroll">
+                        <?php foreach ($info as $inf): ?>
+                            <div class="subcon">                
+                                <div class="itemimg">
+                                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($inf['pic']) . '" alt="Guitar Image">'; ?>                       
+                                </div>
+                                <div class="desbutton">
+                                    <div class="description">
+                                        <h3 data-i18n="admin.consub" >Subject:</h3>
+                                        <p><?php echo $inf['des'] ?></p>
+                                    </div>
+                                    <div class="button">
+                                        <a href="edit.php?id=<?php echo $inf['cid']; ?>">
+                                            <input data-i18n-value="admin.edititem" type="button" name="edit" value="edit">
+                                        </a>
+                                        <a href="readmore.php?id=<?php echo $inf['cid']; ?>">
+                                            <input data-i18n-value="admin.readmoreitem" type="button" name="minfo" value="read more">
+                                        </a>
+                                        <form action="connect.php" method="post">
+                                            <input type="hidden" name="cid" value="<?php echo $inf['cid']; ?>">
+                                            <input data-i18n-value="admin.deleteitem" type="submit" name="delete" value="delete">
+                                        </form>
+                                    </div> 
+                                </div>                                           
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div> 
+            </div>
         </section>
         <div class="addbutton">
             <a href="add.php">

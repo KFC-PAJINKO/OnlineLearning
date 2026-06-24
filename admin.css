@@ -179,7 +179,6 @@ html,body
 
 .slider-viewport {
     width: 1200px;
-    /* overflow: hidden; */
     border-radius: 20px;
 }
 
@@ -188,7 +187,7 @@ html,body
     flex-direction: row;
     transition: transform 0.5s ease-in-out;
     width: max-content;
-    gap: 30px;
+    gap: 50px;
 }
 
 .promotion input:hover
@@ -225,7 +224,8 @@ html,body
 {
     position: absolute;
     right: 0px;
-    top: -10px;
+    top: -13px;
+    z-index: 999;
 }
 
 #del
@@ -259,8 +259,8 @@ html,body
     border-radius: 20px;
     align-items: center;
     flex-shrink: 0;
-    opacity: 0.5; /* Makes all cards faded by default */
-    transition: opacity 0.5s ease-in-out; /* Makes the fade look smooth */
+    /* opacity: 0.5; Makes all cards faded by default */
+    /* transition: opacity 0.5s ease-in-out; Makes the fade look smooth */
 }
 
 /* The special class for the current card */
@@ -301,6 +301,22 @@ html,body
     margin-top: 220px;
 }
 
+.pcline
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.pclinehr
+{
+    width: 1405px;
+}
+
+.pclinehr hr
+{
+    width: 100%;
+}
+
 .popcourse
 {
     display: flex;
@@ -313,6 +329,7 @@ html,body
     margin-top: 20px;
     margin-right: 40px;
     gap: 15px;
+    padding-bottom: 35px;
 }
 
 .popcinfo
@@ -373,30 +390,61 @@ html,body
 {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
     z-index: 10;
-    gap: auto;
-    flex-wrap: wrap;
+    gap: 30px;
+    padding-right: 35px;
 }
 
-.subcon img
+.consubcon h1
 {
-    width: 350px;
-    height: 250px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.contentwrap
+{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    height: 600px;
+    background-color: black;
+    align-items: center;
+    border-radius: 40px;
+    margin-bottom: 100px;
+}
+
+.contentscroll
+{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 475px;
+    background-color: grey;
+    align-items: center;
+    overflow: auto;
+    border-radius: 30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
 }
 
 .subcon
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: #DDDDDD;
     background-color:  #000000;
-    width: 450px;
-    max-height: 500px;
+    width: 550px;
+    max-height: 130px;
     border-radius: 10px;
-    margin-right: 2%;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.subcon img
+{
+    width: 50px;
+    height: 50px;
 }
 
 .subcon .itemimg
@@ -411,6 +459,12 @@ html,body
     border-style: solid;
     border-width: 4px;
     border-color: #ffffff;
+}
+
+.subcon .desbutton
+{
+    display: flex;
+    flex-direction: column;
 }
 
 .subcon .description
@@ -445,13 +499,12 @@ html,body
     padding-bottom: 20px;
     margin-left: 25px;
     gap: 2%;
-    font-size: 10px;
 }
 
 .button input
 {
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .button input:hover
