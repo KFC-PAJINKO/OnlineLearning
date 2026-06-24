@@ -393,7 +393,7 @@ html,body
     margin-top: 50px;
     z-index: 10;
     gap: 30px;
-    padding-right: 35px;
+    padding-right: 45px;
 }
 
 .consubcon h1
@@ -405,7 +405,7 @@ html,body
 {
     display: flex;
     flex-direction: column;
-    width: 650px;
+    width: 675px;
     height: 600px;
     background-color: black;
     align-items: center;
@@ -419,13 +419,16 @@ html,body
     flex-direction: column;
     width: 600px;
     height: 475px;
-    background-color: grey;
+    background-color: black;
     align-items: center;
     overflow: auto;
     border-radius: 30px;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
+    border-style: solid;
+    border-color: #CB2957;
+    border-width: 7px;
 }
 
 .subcon
@@ -433,11 +436,12 @@ html,body
     display: flex;
     flex-direction: row;
     color: #DDDDDD;
-    background-color:  #000000;
+    background-color:  rgb(29, 29, 29);
     width: 550px;
     max-height: 130px;
     border-radius: 10px;
     margin-top: 30px;
+    margin-bottom: 10px;
     align-items: center;
 }
 
