@@ -172,18 +172,16 @@ html,body
     margin-top: 20px;
 }
 
-/* Creates the 1200px wide frame and hides the extra cards */
 .slider-viewport {
     width: 1200px;
     overflow: hidden;
-    border-radius: 20px; /* Keeps the rounded corners clean */
+    border-radius: 20px;
 }
 
-/* Lines all cards up in a single horizontal row */
 .promo-slider-wrapper {
     display: flex;
     flex-direction: row;
-    transition: transform 0.5s ease-in-out; /* Creates the smooth sliding animation */
+    transition: transform 0.5s ease-in-out;
     width: max-content;
 }
 
@@ -240,7 +238,7 @@ html,body
     border-radius: 20px;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0; /* CRITICAL: Prevents cards from shrinking to fit the viewport */
+    flex-shrink: 0;
 }
 
 .procard img

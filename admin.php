@@ -135,7 +135,7 @@
                     <input type="submit" value="e" id="edit">
                 </a>
                 <div class="slider-viewport">
-                    <div class="promo-slider-wrapper"></div>
+                    <div class="promo-slider-wrapper">
                         <?php foreach ($promo as $prom): ?>
                             <div class="procard">
                                 <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($prom['pic']) . '" alt="promotion Image">'; ?>
