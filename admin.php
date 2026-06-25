@@ -122,7 +122,6 @@
                 </div>
             </form>
         </div>
-        
         <section class="content">
             <div class="promotion">
                 <input type="button" value=">" id="next">
@@ -165,9 +164,16 @@
                                     <p><?php echo $pop['description'] ?></p>
                                 </div>
                             </div>
-                            <div class="poprate">
-                                <img src="star.png">
-                                <label>4.5</label>
+                            <div class="botcard">
+                                <div class="poprate">
+                                    <img src="star.png">
+                                    <label>4.5</label>
+                                </div>
+                                <div class="regisbut">
+                                    <a href="readmore.php?id=<?php echo $pop['cid']; ?>">
+                                        <input data-i18n-value="admin.register" type="button" name="regisc" value="Register" id="regis">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -235,9 +241,23 @@
                                 </div>                                           
                             </div>
                         <?php endforeach; ?>
-                    </div>
-                </div> 
+                    </div>                                      
+                </div>       
             </div>
+            <div class="explorbut">
+                <a href="allcourse.php">
+                    <input type="button" value="AllCourse" id="allcbut">
+                </a>
+                <a href="allcourse.php">
+                    <input type="button" value="AllCourse" id="allcbut">
+                </a> 
+                <a href="allcourse.php">
+                    <input type="button" value="AllCourse" id="allcbut">
+                </a>                             
+            </div>
+        </section>
+        <section class="bottom">
+            <p>end here</p>
         </section>
         <div class="addbutton">
             <a href="add.php">

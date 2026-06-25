@@ -27,6 +27,7 @@
         "navcontactus":"Contact us",
         "navcategories":"Categories",
         "popcourse":"PopularCourse🔥🔥🔥:",
+        "register":"Register",
 
         "filter":"Filer:",
         "tfilter":"Type of filter:",
@@ -67,7 +68,7 @@
         "cimg":"Course Image:",
         "cid":"CourseID:",
         "cname":"CourseName:",
-        "ctopic":"CourseTopic:",
+        "ctopic":"CourseTopic",
         "urllink":"Click link",
         "videolink":"see video here"
     },

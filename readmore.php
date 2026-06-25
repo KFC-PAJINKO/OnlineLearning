@@ -13,22 +13,31 @@
         <link rel="stylesheet" href="readmore.css">
     </head>
     <body>
-        <section class="top">
-            <a data-i18n="admin.navhome" href="admin.php">Home</a>
-            <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
-            <form action="admin.php" method="get" enctype="multipart/form-data">
-                <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
-            </form>
-            <div class="pagetag">
-                <h1 data-i18n="admin.navadmin" >Admin</h1>
-                <div class="changelang">
-                    <select id="language-switcher">
-                        <option value="eng">Eng</option>
-                        <option value="thai">Thai</option>
-                    </select>  
-                </div>
-            </div>            
+          <section class="navbar">
+            <section class="topup">
+                <a data-i18n="admin.navcontactus" href="contactus.php">Contact us</a>
+                <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
+            </section>
+            <section class="top">
+                <a data-i18n="admin.navhome" href="admin.php">Home</a>
+                <a data-i18n="admin.navlogout" href="login.php">LogOut</a>
+                <form action="admin.php" method="get" enctype="multipart/form-data">
+                    <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
+                </form>
+                <div class="pagetag">
+                    <p data-i18n="admin.navadmin" >Admin</p>
+                    <div class="changelang">
+                        <script src="langicon.js"></script>
+                        <img src="eng.png" id="langimg">
+                        <select id="language-switcher">
+                            <option value="eng">Eng</option>
+                            <option value="thai">Thai</option>
+                        </select>  
+                    </div>
+                </div>            
+            </section>
         </section>
+        <script src="langicon.js"></script>
         <section class="info">            
             <?php
                 if($result = $conn->query($q))
@@ -38,8 +47,19 @@
                         $minfo = $result->fetch_assoc();
                         ?>                        
                         <div class='desinfo'>
-                            <h1 data-i18n="readmore.courseintro" >Course Introduction: </h1>
-                            <?php echo "<p>".$minfo['description']."</p>"; ?>
+                            <div class="desinfocon">
+                                <div class="desinfoname">
+                                    <?php echo "<h1>".$minfo['des']."</h1>";?>
+                                </div>
+                                <div class="desinfodes">
+                                    <?php echo "<p>".$minfo['description']."</p>"; ?>
+                                </div>          
+                                <div class="regisbut">
+                                    <a href="readmore.php?id=<?php echo $pop['cid']; ?>">
+                                        <input data-i18n-value="admin.register" type="button" name="regisc" value="Register" id="regisbut">
+                                    </a>
+                                </div>                      
+                            </div>
                         </div>
                         <div class='generalinfo'>                            
                             <div class='cpic'>   
@@ -50,9 +70,7 @@
                             </div> 
                             <div class='coursecontent'>
                                 <div class="courseinfo">
-                                    <?php echo "<p data-i18n='readmore.cid' >CourseID: " . $minfo['cid'] . "</p>"; ?>
-                                    <?php echo "<p data-i18n='readmore.cname' >CourseName: " . $minfo['des'] . "</p>"; ?>
-                                    <p data-i18n="readmore.ctopic" >CourseTopic:</p>
+                                    <p data-i18n="readmore.ctopic" >CourseTopic</p>
                                 </div>
                                 <div class="coursetopic">
                                 <?php if($topic = $conn->query($c))

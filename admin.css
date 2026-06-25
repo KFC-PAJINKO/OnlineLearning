@@ -203,6 +203,7 @@ html,body
     opacity: 60%;
     font-family: monospace;
     z-index: 100;
+    transition: all 0.5s;
 }
 
 #back
@@ -213,6 +214,7 @@ html,body
     opacity: 60%;
     font-family: monospace;
     z-index: 100;
+    transition: all 0.5s;
 }
 
 #next:hover, #back:hover 
@@ -256,7 +258,6 @@ html,body
     flex-direction: row;
     width: 1200px;
     height: 250px;
-    border-radius: 20px;
     align-items: center;
     flex-shrink: 0;
     /* opacity: 0.5; Makes all cards faded by default */
@@ -277,8 +278,8 @@ html,body
 .procardimg img
 {
     width: 1200px;
-    height: 450px;
-    margin-top: 180px;
+    height: 500px;
+    margin-top: 200px;
 }
 
 .prodes
@@ -298,7 +299,7 @@ html,body
     font-weight: 600px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     z-index: 900;
-    margin-top: 220px;
+    margin-top: 255px;
 }
 
 .pcline
@@ -368,13 +369,37 @@ html,body
     position: relative;
 }
 
+.botcard
+{
+    display: flex;
+    flex-direction: row;
+}
+
 .poprate
 {
     display: flex;
     flex-direction: row;
     position: absolute;
     left: 25px;
+    bottom: 27px;
+}
+
+.regisbut
+{
+    display: flex;
+    position: absolute;
+    right: 25px;
     bottom: 20px;
+}
+
+#regis
+{
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    background-color: #CB2957;
+    color: white;
+    border: none;
 }
 
 .poprate img
@@ -486,6 +511,15 @@ html,body
     font-size: 20px;
 }
 
+.linehr
+{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-top: 40px;
+
+}
+
 .addbutton
 {
     position: fixed;
@@ -515,4 +549,40 @@ html,body
 {
     color: rgb(255, 255, 255);
     background-color: #d0d0d0;
+}
+
+.bottom
+{
+    display: flex;
+    background-color: #000000;
+    margin-top: 40px;
+}
+
+.explorbut
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    justify-content: center;
+    padding-right: 45px;
+    gap: 40px;
+}
+
+#allcbut
+{
+    padding: 75px 155px;
+    border-radius: 30px;
+    border: none;
+    background-color: #CB2957;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+#allcbut:hover
+{
+    background-color: #ff356e;
 }
