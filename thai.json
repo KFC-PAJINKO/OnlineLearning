@@ -41,7 +41,9 @@
         "consub":"วิชา:",
         "edititem":"แก้ไข",
         "readmoreitem":"อ่านเพิ่มเติม",
-        "deleteitem":"ลบ"
+        "deleteitem":"ลบ",
+
+        "allcourse":"คอร์สทั้งหมด"
     },
         
     "edit":

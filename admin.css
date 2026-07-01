@@ -393,6 +393,12 @@ html,body
     bottom: 20px;
 }
 
+#regis:hover
+{
+    background-color: #ff2c68;
+    transition: all 0.5s;
+}
+
 #regis
 {
     border-radius: 10px;

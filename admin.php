@@ -244,13 +244,13 @@
             </div>
             <div class="explorbut">
                 <a href="allcourse.php">
-                    <input type="button" value="AllCourse" id="allcbut">
+                    <input data-i18n-value="admin.allcourse" type="button" value="AllCourse" id="allcbut">
                 </a>
                 <a href="allcourse.php">
-                    <input type="button" value="AllCourse" id="allcbut">
+                    <input data-i18n-value="admin.allcourse" type="button" value="AllCourse" id="allcbut">
                 </a> 
                 <a href="allcourse.php">
-                    <input type="button" value="AllCourse" id="allcbut">
+                    <input data-i18n-value="admin.allcourse" type="button" value="AllCourse" id="allcbut">
                 </a>                             
             </div>
         </section>

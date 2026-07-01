@@ -41,7 +41,9 @@
         "consub":"Subject:",
         "edititem":"Edit",
         "readmoreitem":"Read more",
-        "deleteitem":"Delete"
+        "deleteitem":"Delete",
+
+        "allcourse":"AllCourse"
     },
         
     "edit":
