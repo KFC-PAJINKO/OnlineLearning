@@ -102,10 +102,8 @@
                 </div>            
             </section>
         </section>
-
         <script src="langicon.js"></script>
-
-        <div class="filter">            
+        <!-- <div class="filter">            
             <form action="admin.php" method="get">
                 <div class="fbut">
                     <label data-i18n="admin.filter" >Filter</label>
@@ -121,7 +119,7 @@
                     </select>
                 </div>
             </form>
-        </div>
+        </div> -->
         <section class="content">
             <div class="promotion">
                 <input type="button" value=">" id="next">

@@ -60,17 +60,26 @@
                                     </a>
                                 </div>                      
                             </div>
+                            <div class="coursereview">
+                                <div class="star">
+                                    <img src="star.png">
+                                    <label>4.5</label>
+                                </div>
+                                <div class="review">
+                                    <p>120 reviews</p>
+                                </div>
+                            </div>
                         </div>
                         <div class='generalinfo'>                            
-                            <div class='cpic'>   
+                            <!-- <div class='cpic'>   
                                 <h1 data-i18n="readmore.cimg" >Course Image:</h1>     
                                 <div class="cpicborder">                                                 
                                 <?php echo "<img src='data:image/jpeg;base64," . base64_encode($minfo['pic']) . "' alt='Guitar Image'>"; ?>
                                 </div>
-                            </div> 
+                            </div>  -->
                             <div class='coursecontent'>
                                 <div class="courseinfo">
-                                    <p data-i18n="readmore.ctopic" >CourseTopic</p>
+                                    <p data-i18n="readmore.curriculum" id="curriculum">CourseCurriculum</p>
                                 </div>
                                 <div class="coursetopic">
                                 <?php if($topic = $conn->query($c))
@@ -84,6 +93,7 @@
                                                     foreach($t as $ta):
                                                     ?>  
                                                     <div class="topicitem">
+                                                        <?php echo "<img src='data:image/jpeg;base64," . base64_encode($minfo['pic']) . "' alt='Guitar Image'>"; ?>
                                                         <label>TID: </label>
                                                         <?= $ta['tid'] ?>   
                                                         <label>Topic: </label>

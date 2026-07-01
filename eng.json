@@ -68,7 +68,7 @@
         "cimg":"Course Image:",
         "cid":"CourseID:",
         "cname":"CourseName:",
-        "ctopic":"CourseTopic",
+        "curriculum":"CourseCurriculum",
         "urllink":"Click link",
         "videolink":"see video here"
     },
