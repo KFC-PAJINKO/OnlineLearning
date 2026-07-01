@@ -74,7 +74,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Admin page</title>
+        <title>User page</title>
         <link rel="stylesheet" href="admin.css">
         </head>
     <bodY>
@@ -90,7 +90,7 @@
                     <input data-i18n-placeholder="admin.navsearch" type="text" name="sbar" placeholder="Search...">
                 </form>
                 <div class="pagetag">
-                    <p data-i18n="admin.navadmin" >Admin</p>
+                    <p data-i18n="admin.navuser" >User</p>
                     <div class="changelang">
                         <script src="langicon.js"></script>
                         <img src="eng.png" id="langimg">
